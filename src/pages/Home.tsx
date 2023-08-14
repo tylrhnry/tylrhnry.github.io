@@ -7,8 +7,11 @@ import {
     Box, 
     Typography,
     Container,
+    useTheme,
 } from "@mui/material";
 import Portrait from "../components/Portrait";
+import FeaturedProducts from "../components/FeaturedProjects";
+import BriefWorkHis from "../components/BriefWorkHis";
 
 
 
@@ -22,9 +25,9 @@ const Home: FC<any> = (): ReactElement => {
             flexDirection: "column",
             justifyContent: "top",
             alignItems: "center",
-            padding: "2rem"
         }}>
-            <Container sx={{
+            {/* consolodate the maxWidth into 1 container */}
+            <Container maxWidth="xl" sx={{
                 display: "flex",
                 flexDirection: { xs: "column", md: "row"},
                 padding: "1rem",
@@ -51,35 +54,18 @@ const Home: FC<any> = (): ReactElement => {
 
             </Container>
 
-            <Container sx={{
+            <Container maxWidth="xl" sx={{
                 display: "flex",
                 flexDirection: { xs: "column", md: "row"},
                 padding: "1rem",
                 
             }}>
                 <Container sx={{ padding: "1rem" }}>
-                    {/* nested list? */}
-                    <Typography variant="h5">Featured Projects</Typography>
-                    <Typography sx={{ marginTop: "1rem" }}>
-                        Curabitur volutpat cursus metus, sit amet tincidunt risus. Sed 
-                        vel libero id felis congue laoreet. Praesent aliquam risus nec 
-                        nisi accumsan lacinia.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                        interdum nunc nec ante fringilla, eu ultricies odio finibus. 
-                        Sed ut ante eu lectus aliquet iaculis.
-                    </Typography>
+                    <FeaturedProducts></FeaturedProducts>
                 </Container>
 
                 <Container sx={{ padding: "1rem" }}>
-                    <Typography variant="h5">Brief Work History</Typography>
-                    <Typography sx={{ marginTop: "1rem" }}>
-                        Curabitur volutpat cursus metus, sit amet tincidunt risus. Sed 
-                        vel libero id felis congue laoreet. Praesent aliquam risus nec 
-                        nisi accumsan lacinia.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                        interdum nunc nec ante fringilla, eu ultricies odio finibus. 
-                        Sed ut ante eu lectus aliquet iaculis.
-                    </Typography>
+                    <BriefWorkHis></BriefWorkHis>
                 </Container>
             </Container>
             

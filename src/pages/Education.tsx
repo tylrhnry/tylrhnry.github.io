@@ -9,8 +9,12 @@
 
 
 import React, {ReactElement, FC} from "react";
-import {Box, Typography} from "@mui/material";
-
+import { 
+    Box,
+    Container,
+    Typography,
+} from "@mui/material";
+import CoursesList from "../components/CoursesList";
 
 
 
@@ -21,46 +25,46 @@ const Education: FC<any> = (): ReactElement => {
             backgroundColor: "whitesmoke",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
+            justifyContent: "top",
             alignItems: "center",
-            padding: "2rem"
         }}>
-            <Typography variant="h3">Education</Typography>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum nunc nec ante fringilla, eu ultricies odio finibus. Sed ut ante eu lectus aliquet iaculis.
-            </p>
+            {/* consolodate the maxWidth into 1 container */}
+            <Container maxWidth="xl" sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row"},
+                padding: "1rem",
+            }}>
 
-            <p>
-                Ut euismod dolor eget ligula vehicula, a gravida libero gravida. Donec nec justo vel elit aliquet fermentum nec ut tellus. Fusce vestibulum, justo nec auctor facilisis, libero metus ullamcorper ex.
-            </p>
+                {/* <Portrait/> */}
 
-            <p>
-                Curabitur volutpat cursus metus, sit amet tincidunt risus. Sed vel libero id felis congue laoreet. Praesent aliquam risus nec nisi accumsan lacinia.
-            </p>
+                <Container sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    padding: "1rem",
+                }}>
+                    <Typography variant="h3">Education</Typography>
+                    <CoursesList/>
+                </Container>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum nunc nec ante fringilla, eu ultricies odio finibus. Sed ut ante eu lectus aliquet iaculis.
-            </p>
+            </Container>
 
-            <p>
-                Ut euismod dolor eget ligula vehicula, a gravida libero gravida. Donec nec justo vel elit aliquet fermentum nec ut tellus. Fusce vestibulum, justo nec auctor facilisis, libero metus ullamcorper ex.
-            </p>
+            <Container maxWidth="xl" sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row"},
+                padding: "1rem",
+                
+            }}>
+                <Container sx={{ padding: "1rem" }}>
+                    <div></div>
+                </Container>
 
-            <p>
-                Curabitur volutpat cursus metus, sit amet tincidunt risus. Sed vel libero id felis congue laoreet. Praesent aliquam risus nec nisi accumsan lacinia.
-            </p>
+                <Container sx={{ padding: "1rem" }}>
+                    <div></div>
+                </Container>
+            </Container>
+            
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum nunc nec ante fringilla, eu ultricies odio finibus. Sed ut ante eu lectus aliquet iaculis.
-            </p>
-
-            <p>
-                Ut euismod dolor eget ligula vehicula, a gravida libero gravida. Donec nec justo vel elit aliquet fermentum nec ut tellus. Fusce vestibulum, justo nec auctor facilisis, libero metus ullamcorper ex.
-            </p>
-
-            <p>
-                Curabitur volutpat cursus metus, sit amet tincidunt risus. Sed vel libero id felis congue laoreet. Praesent aliquam risus nec nisi accumsan lacinia.
-            </p>
+            
         </Box>
     );
 };

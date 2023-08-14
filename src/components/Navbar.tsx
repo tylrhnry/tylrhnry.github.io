@@ -14,6 +14,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { routes } from "../routes";
 import { NavLink } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
+
 
 const Navbar: FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,11 +39,12 @@ const Navbar: FC = (): ReactElement => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            variant="h5"
+            variant="h4"
             noWrap
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
+              paddingLeft: "3rem"
             }}
           >
             Tyler Henry
@@ -95,7 +98,10 @@ const Navbar: FC = (): ReactElement => {
             variant="h4"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{ 
+              flexGrow: 1, 
+              display: { xs: "flex", md: "none" },
+             }}
           >
             Tyler Henry
           </Typography>
@@ -119,7 +125,7 @@ const Navbar: FC = (): ReactElement => {
                   variant="button"
                   sx={{ 
                     fontSize: "large", 
-                    marginLeft: "2rem",
+                    marginLeft: "1rem",
                     "&:hover": {
                       color: "white",
                     }
@@ -131,6 +137,7 @@ const Navbar: FC = (): ReactElement => {
               ))}
             </Box>
           </Box>
+          <ThemeSwitcher />
         </Toolbar>
       </Container>
     </Box>
