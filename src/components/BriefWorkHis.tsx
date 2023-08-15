@@ -1,16 +1,28 @@
 
-import React, {ReactElement, FC} from "react";
+
+import React, {useState, FC} from "react";
 import {
     Box,
     Typography,
     Accordion,
     AccordionSummary,
     AccordionDetails,
+    Link,
+    Button,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 
-const BriefWorkHis: FC<any> = () => {
+const BriefWorkHis: FC<{ data: Array<{ title: string; content: string; }> }> = ({ data }) => {
+
+    const [expandedAccordion, setExpanded] = useState<number | null>(null);
+
+    const handleExpanding = (index: number) => (event: React.ChangeEvent<{}>,
+                                                isExpanded: boolean) => {
+        setExpanded(isExpanded ? index : null);
+    };
+
+
     return (
         <div>
             <Box>
@@ -18,30 +30,22 @@ const BriefWorkHis: FC<any> = () => {
                     padding: "1rem",
                 }}>Brief Work History</Typography>
             </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
+            <div>
+            {data.map((item, index) => (
+                <Accordion
+                    key={index}
+                    expanded={expandedAccordion === index}
+                    onChange={handleExpanding(index)}
+                >
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography>{item.title}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>{item.content}</Typography>
+                    </AccordionDetails>
+                </Accordion>
+            ))}
+            </div>
         </div>
     );
 }

@@ -14,9 +14,8 @@ import {
     useTheme,
 } from "@mui/material";
 import Portrait from "../components/Portrait";
-import FeaturedProducts from "../components/FeaturedProjects";
-import BriefWorkHis from "../components/BriefWorkHis";
-import Test from "../components/FeaturedProjectsList";
+import BriefWorkHisList from "../components/BriefWorkHisList";
+import FeaturedProjectsList from "../components/FeaturedProjectsList";
 
 
 
@@ -65,11 +64,11 @@ const Home: FC<any> = (): ReactElement => {
                 flexDirection: { xs: "column", md: "row"},
             }}>
                 <Container sx={{ padding: "1rem" }}>
-                    <Test />
+                    <FeaturedProjectsList />
                 </Container>
 
                 <Container sx={{ padding: "1rem" }}>
-                    <BriefWorkHis></BriefWorkHis>
+                    <BriefWorkHisList />
                 </Container>
             </Container>
 

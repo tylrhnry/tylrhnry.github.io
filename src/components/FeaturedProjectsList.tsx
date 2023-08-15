@@ -1,7 +1,7 @@
 import React from "react";
 import FeaturedProducts from "./FeaturedProjects";
 
-const Test: React.FC = () => {
+const FeaturedProjectsList: React.FC = () => {
     // Example data for the accordions
     const data = [
         { title: "Project 1", content: "Description for Project 1", url: "https://github.com" },
@@ -18,4 +18,4 @@ const Test: React.FC = () => {
     );
 }
 
-export default Test;
+export default FeaturedProjectsList;
