@@ -13,7 +13,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 
-const FeaturedProducts: FC<{ data: Array<{ title: string; content: string }> }> = ({ data }) => {
+const FeaturedProducts: FC<{ data: Array<{ title: string; content: string; url: string }> }> = ({ data }) => {
 
     const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
@@ -38,17 +38,12 @@ const FeaturedProducts: FC<{ data: Array<{ title: string; content: string }> }> 
                     onChange={handleExpanding(index)}
                 >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography>Prime Factors with Multithreading</Typography>
+                        <Typography>{item.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography>Language: C</Typography>
-                        <Typography>
-                            Desc: This project does this.
-                            It takes these parameters/inputs.
-                            It does this stuff with it.
-                            It returns these values/outputs                    </Typography>
+                        <Typography>{item.content}</Typography>
                         <Link 
-                            href="https://github.com"
+                            href={item.url}
                             target = "_blank"
                             rel="noopener noreferrer"
                             underline="hover">
@@ -56,22 +51,6 @@ const FeaturedProducts: FC<{ data: Array<{ title: string; content: string }> }> 
                         </Link>
                     </AccordionDetails>
                 </Accordion>
-                // <Accordion>
-                //     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                //         <Typography>Numerical Calculus</Typography>
-                //     </AccordionSummary>
-                //     <AccordionDetails>
-                //         <Typography>Details 2</Typography>
-                //     </AccordionDetails>
-                // </Accordion>
-                // <Accordion>
-                //     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                //         <Typography>Data Smoothing with C++</Typography>
-                //     </AccordionSummary>
-                //     <AccordionDetails>
-                //         <Typography>Details 3</Typography>
-                //     </AccordionDetails>
-                // </Accordion>
             ))}
             </div>
         </div>

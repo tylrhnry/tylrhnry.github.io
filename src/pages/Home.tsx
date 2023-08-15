@@ -16,7 +16,7 @@ import {
 import Portrait from "../components/Portrait";
 import FeaturedProducts from "../components/FeaturedProjects";
 import BriefWorkHis from "../components/BriefWorkHis";
-import Test from "./test_page";
+import Test from "../components/FeaturedProjectsList";
 
 
 
