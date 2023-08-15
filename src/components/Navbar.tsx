@@ -44,7 +44,8 @@ const Navbar: FC = (): ReactElement => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              paddingLeft: "3rem"
+              paddingLeft: "3rem",
+              color: "black"
             }}
           >
             Tyler Henry
@@ -101,6 +102,7 @@ const Navbar: FC = (): ReactElement => {
             sx={{ 
               flexGrow: 1, 
               display: { xs: "flex", md: "none" },
+              color: "black",
              }}
           >
             Tyler Henry

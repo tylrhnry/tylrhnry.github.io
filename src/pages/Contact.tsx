@@ -7,13 +7,11 @@ import React, {ReactElement, FC} from "react";
 import {Box, Typography} from "@mui/material";
 
 
-
-
 const Contact: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
             flexGrow: 1,
-            backgroundColor: "whitesmoke",
+            // backgroundColor: "whitesmoke",
             display: "flex",
             justifyContent: "center",
             alignItems: "center"

@@ -6,24 +6,85 @@
 
 
 
-import React, {ReactElement, FC} from "react";
-import {Box, Typography} from "@mui/material";
+import React from "react";
+import {
+  Box,
+  Container,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 
 
+const Experience: React.FC = () => {
+  const accordionData = [
+    {
+      title: "Accordion 1",
+      content: "Content for Accordion 1",
+    },
+    {
+      title: "Accordion 2",
+      content: "Content for Accordion 2",
+    },
+    {
+      title: "Accordion 3",
+      content: "Content for Accordion 3",
+    },
+    {
+      title: "Accordion 4",
+      content: "Content for Accordion 4",
+    },
+    {
+      title: "Accordion 5",
+      content: "Content for Accordion 5",
+    },
+    // Add more accordion items
+  ];
 
-const Experience: FC<any> = (): ReactElement => {
-    return (
-        <Box sx={{
+  return (
+      <Box sx={{
             flexGrow: 1,
-            backgroundColor: "whitesmoke",
+            // backgroundColor: "whitesmoke",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
+            flexDirection: "column",
+            justifyContent: "top",
+            alignItems: "center",
+      }}>
+        <Container maxWidth="xl" sx={{
+          padding: "1rem",
         }}>
-            <Typography variant="h3">Experience</Typography>
-        </Box>
-    );
+          <Container sx={{ padding: "1rem" }}>
+            <Typography variant="h3" sx={{
+              display: {md: "none"},
+            }}>Experience</Typography>
+          </Container>
+
+          <Container maxWidth="xl" sx={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "1rem",
+          }}>
+            {accordionData.map((item, index) => (
+              <Accordion
+                key={index}
+                sx={{
+                  backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke",
+              }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography>{item.title}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{item.content}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </Container>
+        </Container>
+      </Box>
+  );
 };
 
 export default Experience;

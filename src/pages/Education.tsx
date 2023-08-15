@@ -1,11 +1,16 @@
 // Past, present, future courses
 // GPA, Transcripts, Credits
 // Scholarships, awards, clubs
+ 
+// point out that projects alone are on 'experience'
+
 // Programming projects
     // Tutorial/explanation/requirements
     // Interactive code
     // Program simulator
     // Link to github/gitlab
+
+// Get rid of "Education" at the top and color tab?
 
 
 import React, {ReactElement, FC} from "react";
@@ -14,7 +19,8 @@ import {
     Container,
     Typography,
 } from "@mui/material";
-import CoursesList from "../components/CoursesList";
+import PastCourses from "../components/PastCourses";
+import FutureCourses from "../components/FutureCourses";
 
 
 
@@ -22,7 +28,7 @@ const Education: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
             flexGrow: 1,
-            backgroundColor: "whitesmoke",
+            // backgroundColor: "whitesmoke",
             display: "flex",
             flexDirection: "column",
             justifyContent: "top",
@@ -43,7 +49,6 @@ const Education: FC<any> = (): ReactElement => {
                     padding: "1rem",
                 }}>
                     <Typography variant="h3">Education</Typography>
-                    <CoursesList/>
                 </Container>
 
             </Container>
@@ -55,11 +60,11 @@ const Education: FC<any> = (): ReactElement => {
                 
             }}>
                 <Container sx={{ padding: "1rem" }}>
-                    <div></div>
+                    <PastCourses/>
                 </Container>
 
                 <Container sx={{ padding: "1rem" }}>
-                    <div></div>
+                    <FutureCourses/>
                 </Container>
             </Container>
             

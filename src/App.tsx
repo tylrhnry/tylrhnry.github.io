@@ -10,7 +10,6 @@ import BackToTopButton from './components/BackToTopButton';
 
 function App() {
 
-
   const theme = createTheme({
     palette: {
       primary: {
