@@ -16,7 +16,7 @@ import {
 import Portrait from "../components/Portrait";
 import FeaturedProducts from "../components/FeaturedProjects";
 import BriefWorkHis from "../components/BriefWorkHis";
-
+import Test from "./test_page";
 
 
 
@@ -65,7 +65,7 @@ const Home: FC<any> = (): ReactElement => {
                 flexDirection: { xs: "column", md: "row"},
             }}>
                 <Container sx={{ padding: "1rem" }}>
-                    <FeaturedProducts></FeaturedProducts>
+                    <Test />
                 </Container>
 
                 <Container sx={{ padding: "1rem" }}>
