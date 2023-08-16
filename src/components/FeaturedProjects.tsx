@@ -36,6 +36,7 @@ const FeaturedProducts: FC<{ data: Array<{ title: string; content: string; url: 
                     key={index}
                     expanded={expandedAccordion === index}
                     onChange={handleExpanding(index)}
+                    sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
                 >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography>{item.title}</Typography>

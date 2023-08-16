@@ -2,7 +2,7 @@
 // add grade, desc, & projects
 
 
-import React, {ReactElement, FC} from "react";
+import React, {useState, FC} from "react";
 import {
     Box,
     Typography,
@@ -13,7 +13,14 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 
-const PastCourses: FC<any> = () => {
+const PastCourses: FC<{ data: Array<{courseName: string; courseDesc: string; projects: string[]}> }> = ({data}) => {
+    const [expandedAccordion, setExpanded] = useState<number | null>(null);
+
+    const handleExpanding = (index: number) => (event: React.ChangeEvent<{}>,
+                                                isExpanded: boolean) => {
+        setExpanded(isExpanded ? index : null);
+    };    
+    
     return (
         <div>
             <Box>
@@ -22,173 +29,27 @@ const PastCourses: FC<any> = () => {
                 }}>Past Courses</Typography>
             </Box>
 
-            {/* Fall 2023 */}
-            <Box>
-                <Typography sx={{
-                    paddingLeft: ".5rem",
-                    paddingTop: ".5rem",
-                }}>Fall 2023</Typography>
-            </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Rust Programming</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Python Software Development</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Data Privacy & Security</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Analysis of Programming Languages</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Computer Networks</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
-            
-            {/* Summer 2023 */}
-            <Box>
-                <Typography sx={{
-                    paddingLeft: ".5rem",
-                    paddingTop: ".5rem",
-                }}>Summer 2023</Typography>
-            </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Operating Systems Theory</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Numerical Software Development</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            
-            {/* Spring 2023 */}
-            <Box>
-                <Typography sx={{
-                    paddingLeft: ".5rem",
-                    paddingTop: ".5rem",
-                }}>Spring 2023</Typography>
-            </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
 
-            {/* Fall 2022 */}
-            <Box>
-                <Typography sx={{
-                    paddingLeft: ".5rem",
-                    paddingTop: ".5rem",
-                }}>Fall 2023</Typography>
-            </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
+            <div>
+            {data.map((item, index) => (
+                <Accordion
+                    key={index}
+                    expanded={expandedAccordion === index}
+                    onChange={handleExpanding(index)}
+                    sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
+                >
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography>{item.courseName}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>{item.courseDesc}</Typography>
+                        {/* list out the projects */}
+                    </AccordionDetails>
+                </Accordion>
+            ))}
+            </div>
 
-            {/* Spring 2022*/}
-            <Box>
-                <Typography sx={{
-                    paddingLeft: ".5rem",
-                    paddingTop: ".5rem",
-                }}>Spring 2022</Typography>
-            </Box>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 1</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 2</Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>Summary 3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>Details 3</Typography>
-                </AccordionDetails>
-            </Accordion>
+            
         </div>
     );
 }

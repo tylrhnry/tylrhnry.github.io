@@ -36,6 +36,7 @@ const BriefWorkHis: FC<{ data: Array<{ title: string; content: string; }> }> = (
                     key={index}
                     expanded={expandedAccordion === index}
                     onChange={handleExpanding(index)}
+                    sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
                 >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography>{item.title}</Typography>

@@ -1,24 +1,40 @@
-// Picture
-// Contact info and links
-    // email, phone, linkedin, github/gitlab, youtube
+import React, { useState } from "react";
+import { Box, Container, Typography } from "@mui/material";
+import ProjectTemplate from "../components/Projects.tsx/ProjectTemplate";
+import { projectData } from "../components/Projects.tsx/ProjectData";
 
+const ProjectsPage: React.FC = () => {
+    const [expandedAccordion, setExpandedAccordion] = useState<number | null>(null);
 
-import React, {ReactElement, FC} from "react";
-import {Box, Typography} from "@mui/material";
+    const handleExpandChange = (index: number, isExpanded: boolean) => {
+        setExpandedAccordion(isExpanded ? index : null);
+    };
 
-
-const Contact: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
             flexGrow: 1,
             // backgroundColor: "whitesmoke",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
+            flexDirection: "column",
+            justifyContent: "top",
+            alignItems: "center",
         }}>
-            <Typography variant="h3">Contact</Typography>
+            <Container>
+            <Typography variant="h3">Projects</Typography>
+            {projectData.map((project, index) => (
+                <ProjectTemplate
+                    key={index}
+                    title={project.title}
+                    description={project.description}
+                    githubLink={project.githubLink}
+                    index={index}
+                    isExpanded={index === expandedAccordion}
+                    onExpandChange={(isExpanded) => handleExpandChange(index, isExpanded)}
+                />
+            ))}
+            </Container>
         </Box>
     );
 };
 
-export default Contact;
+export default ProjectsPage;

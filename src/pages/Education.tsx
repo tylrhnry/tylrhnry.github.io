@@ -19,8 +19,8 @@ import {
     Container,
     Typography,
 } from "@mui/material";
-import PastCourses from "../components/PastCourses";
-import FutureCourses from "../components/FutureCourses";
+import PastCoursesList from "../components/PastCoursesList";
+import FutureCoursesList from "../components/FutureCoursesList";
 
 
 
@@ -41,8 +41,6 @@ const Education: FC<any> = (): ReactElement => {
                 padding: "1rem",
             }}>
 
-                {/* <Portrait/> */}
-
                 <Container sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -60,11 +58,11 @@ const Education: FC<any> = (): ReactElement => {
                 
             }}>
                 <Container sx={{ padding: "1rem" }}>
-                    <PastCourses/>
+                    <PastCoursesList/>
                 </Container>
 
                 <Container sx={{ padding: "1rem" }}>
-                    <FutureCourses/>
+                    <FutureCoursesList/>
                 </Container>
             </Container>
             
