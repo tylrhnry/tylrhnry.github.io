@@ -12,64 +12,59 @@
 
 // Get rid of "Education" at the top and color tab?
 
-
 import React, {ReactElement, FC} from "react";
 import { 
     Box,
     Container,
     Typography,
 } from "@mui/material";
-import PastCoursesList from "../components/PastCoursesList";
-import FutureCoursesList from "../components/FutureCoursesList";
-
+import PastCoursesList from "../components/EducationComps/PastCoursesList";
+import FutureCoursesList from "../components/EducationComps/FutureCoursesList";
 
 
 const Education: FC<any> = (): ReactElement => {
-    return (
-        <Box sx={{
-            flexGrow: 1,
-            // backgroundColor: "whitesmoke",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "top",
-            alignItems: "center",
+  return (
+    <Box sx={{
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      {/* consolodate the maxWidth into 1 container */}
+      <Container maxWidth="xl" sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row"},
+        padding: "1rem",
+      }}>
+
+        <Container sx={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "1rem",
         }}>
-            {/* consolodate the maxWidth into 1 container */}
-            <Container maxWidth="xl" sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row"},
-                padding: "1rem",
-            }}>
+          <Typography variant="h3">Education</Typography>
+        </Container>
 
-                <Container sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    padding: "1rem",
-                }}>
-                    <Typography variant="h3">Education</Typography>
-                </Container>
+      </Container>
 
-            </Container>
+      <Container maxWidth="xl" sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row"},
+          padding: "1rem",
+          
+      }}>
+        <Container sx={{ padding: "1rem" }}>
+          <PastCoursesList/>
+        </Container>
 
-            <Container maxWidth="xl" sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row"},
-                padding: "1rem",
-                
-            }}>
-                <Container sx={{ padding: "1rem" }}>
-                    <PastCoursesList/>
-                </Container>
+        <Container sx={{ padding: "1rem" }}>
+          <FutureCoursesList/>
+        </Container>
+      </Container>
 
-                <Container sx={{ padding: "1rem" }}>
-                    <FutureCoursesList/>
-                </Container>
-            </Container>
-            
-
-            
-        </Box>
-    );
+    </Box>
+  );
 };
 
 export default Education;

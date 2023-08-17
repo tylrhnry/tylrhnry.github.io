@@ -1,40 +1,41 @@
-import React, { useState } from "react";
-import { Box, Container, Typography } from "@mui/material";
-import ProjectTemplate from "../components/Projects.tsx/ProjectTemplate";
-import { projectData } from "../components/Projects.tsx/ProjectData";
 
-const ProjectsPage: React.FC = () => {
-    const [expandedAccordion, setExpandedAccordion] = useState<number | null>(null);
+import React from "react";
+import {
+  Box,
+  Container,
+  Typography,
+} from "@mui/material";    
 
-    const handleExpandChange = (index: number, isExpanded: boolean) => {
-        setExpandedAccordion(isExpanded ? index : null);
-    };
 
-    return (
-        <Box sx={{
-            flexGrow: 1,
-            // backgroundColor: "whitesmoke",
+const Experience: React.FC = () => {
+  return (
+    <Box sx={{
+      flexGrow: 1,
+      // backgroundColor: "whitesmoke",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      <Container maxWidth="xl" sx={{
+        padding: "1rem",
+      }}>
+        <Container sx={{ padding: "1rem" }}>
+          <Typography variant="h3" sx={{
+            display: {md: "none"},
+          }}>Experience</Typography>
+        </Container>
+
+          <Container maxWidth="xl" sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "top",
-            alignItems: "center",
-        }}>
-            <Container>
-            <Typography variant="h3">Projects</Typography>
-            {projectData.map((project, index) => (
-                <ProjectTemplate
-                    key={index}
-                    title={project.title}
-                    description={project.description}
-                    githubLink={project.githubLink}
-                    index={index}
-                    isExpanded={index === expandedAccordion}
-                    onExpandChange={(isExpanded) => handleExpandChange(index, isExpanded)}
-                />
-            ))}
-            </Container>
-        </Box>
-    );
+            padding: "1rem",
+          }}>
+            <div></div>
+        </Container>
+      </Container>
+    </Box>
+  );
 };
 
-export default ProjectsPage;
+export default Experience;

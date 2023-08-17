@@ -8,72 +8,70 @@
 
 import React, {ReactElement, FC} from "react";
 import {
-    Box, 
-    Typography,
-    Container,
-    useTheme,
+  Box, 
+  Typography,
+  Container,
 } from "@mui/material";
-import Portrait from "../components/Portrait";
-import BriefWorkHisList from "../components/BriefWorkHisList";
-import FeaturedProjectsList from "../components/FeaturedProjectsList";
+import Portrait from "../components/HomeComps/Portrait";
+import BriefWorkHisList from "../components/HomeComps/BriefWorkHisList";
+import FeaturedProjectsList from "../components/HomeComps/FeaturedProjectsList";
 
 
 
 const Home: FC<any> = (): ReactElement => {
-    return (
-        <Box sx={{
-            flexGrow: 1,
-            // backgroundColor: "whitesmoke",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "top",
-            alignItems: "center",
+  return (
+    <Box sx={{
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      {/* consolodate the maxWidth into 1 container */}
+      <Container maxWidth="xl" sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row"},
+        padding: "1rem",
+      }}>
+
+        <Portrait/>
+
+        <Container sx={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "1rem",
         }}>
-            {/* consolodate the maxWidth into 1 container */}
-            <Container maxWidth="xl" sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row"},
-                padding: "1rem",
-            }}>
+          <Typography variant="h3" sx={{
+            display: {md: "none"}
+          }}>Home</Typography>
+          <Typography sx={{ paddingTop: {xs: "1rem", md: "2rem" } }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            interdum nunc nec ante fringilla, eu ultricies odio finibus. 
+            Sed ut ante eu lectus aliquet iaculis.
+            Ut euismod dolor eget ligula vehicula, a gravida libero gravida.
+            Donec nec justo vel elit aliquet fermentum nec ut tellus. 
+            Fusce vestibulum, justo nec auctor facilisis, libero metus 
+            ullamcorper ex.
+          </Typography>
+        </Container>
 
-                <Portrait/>
+      </Container>
 
-                <Container sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    padding: "1rem",
-                }}>
-                    <Typography variant="h3" sx={{
-                        display: {md: "none"}
-                    }}>Home</Typography>
-                    <Typography sx={{ paddingTop: {xs: "1rem", md: "2rem" } }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                        interdum nunc nec ante fringilla, eu ultricies odio finibus. 
-                        Sed ut ante eu lectus aliquet iaculis.
-                        Ut euismod dolor eget ligula vehicula, a gravida libero gravida.
-                        Donec nec justo vel elit aliquet fermentum nec ut tellus. 
-                        Fusce vestibulum, justo nec auctor facilisis, libero metus 
-                        ullamcorper ex.
-                    </Typography>
-                </Container>
+      <Container maxWidth="xl" sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row"},
+      }}>
+        <Container sx={{ padding: "1rem" }}>
+          <FeaturedProjectsList />
+        </Container>
 
-            </Container>
+        <Container sx={{ padding: "1rem" }}>
+          <BriefWorkHisList />
+        </Container>
+      </Container>
 
-            <Container maxWidth="xl" sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row"},
-            }}>
-                <Container sx={{ padding: "1rem" }}>
-                    <FeaturedProjectsList />
-                </Container>
-
-                <Container sx={{ padding: "1rem" }}>
-                    <BriefWorkHisList />
-                </Container>
-            </Container>
-
-        </Box>
-    );
+    </Box>
+  );
 };
 
 export default Home;

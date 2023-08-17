@@ -1,15 +1,56 @@
+// holds the info for all of the projects that will be shown on
+// the site
 
+
+// add lists that hold projects organized by course?
+// just filter for if course === {course we want to display}?
 
 export const projectData = [
-    {
-      title: "Project 1",
-      description: "Description of Project 1...",
-      githubLink: "https://github.com/project1",
-    },
-    {
-      title: "Project 2",
-      description: "Description of Project 2...",
-      githubLink: "https://github.com/project2",
-    },
-    // Add more projects as needed
+  {
+    title: "Project 1",
+    description: "Description of Project 1...",
+    githubLink: "https://github.com/project1",
+    course: "3060",
+    featured: true,
+  },
+  {
+    title: "Project 2",
+    description: "Description of Project 2...",
+    githubLink: "https://github.com/project2",
+    course: "3060",
+    featured: true,
+  },
+  {
+    title: "Project 3",
+    description: "Description of Project 3...",
+    githubLink: "https://github.com/project1",
+    course: "3320",
+    featured: false,
+  },
+  {
+    title: "Project 4",
+    description: "Description of Project 4...",
+    githubLink: "https://github.com/project2",
+    course: "3320",
+    featured: false,
+  },
+  {
+    title: "Project 5",
+    description: "Description of Project 5...",
+    githubLink: "https://github.com/project1",
+    course: "3320",
+    featured: true,
+  },
+  {
+    title: "Project 6",
+    description: "Description of Project 6...",
+    githubLink: "https://github.com/project2",
+    course: "3320",
+    featured: false,
+  },
+  // Add more projects as needed
 ];
+
+// projects to be displayed on home page
+export const featuredProjects = 
+              projectData.filter(project => project.featured)
