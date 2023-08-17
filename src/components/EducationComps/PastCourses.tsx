@@ -1,53 +1,47 @@
 // color every other list item differently (increase readability)
-// add grade, desc, & projects
+// add grade, desc, & courses
 
 
-import React, {useState, FC} from "react";
+import React, { useState } from "react";
 import {
   Box,
+  Container,
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import { CourseData } from "../Courses/CoursesData";
+import CourseTemplate from "../Courses/CourseTemplate";
 
 
-const PastCourses: FC<{ data: Array<{courseName: string; courseDesc: string; projects: string[]}> }> = ({data}) => {
+const PastCourses: React.FC = () => {
   const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
-  const handleExpanding = (index: number) => (event: React.ChangeEvent<{}>,
-                                              isExpanded: boolean) => {
-    setExpanded(isExpanded ? index : null);
-  };    
+  const handleExpanding = (index: number, isExpanded: boolean) => {
+      setExpanded(isExpanded ? index : null);
+  };   
   
   return (
-    <div>
-      <Box>
-          <Typography variant="h5" sx={{
-              padding: "1rem",
-          }}>Past Courses</Typography>
-      </Box>
-
-      <div>
-        {data.map((item, index) => (
-          <Accordion
-            key={index}
-            expanded={expandedAccordion === index}
-            onChange={handleExpanding(index)}
-            sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{item.courseName}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{item.courseDesc}</Typography>
-              {/* list out the projects */}
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </div>
-    </div>
+    <Box sx={{
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      <Container>
+      <Typography variant="h5">Courses</Typography>
+      {CourseData.map((course, index) => (
+        <CourseTemplate
+          key={index}
+          title={course.title}
+          courseCode={course.courseCode}
+          description={course.description}
+          index={index}
+          isExpanded={index === expandedAccordion}
+          onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
+        />
+      ))}
+      </Container>
+    </Box>
   );
 }
 

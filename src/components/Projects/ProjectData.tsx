@@ -6,6 +6,7 @@
 // just filter for if course === {course we want to display}?
 
 export const projectData = [
+  // 3060 projects
   {
     title: "Project 1",
     description: "Description of Project 1...",
@@ -20,6 +21,8 @@ export const projectData = [
     course: "3060",
     featured: true,
   },
+
+  // 3320 projects
   {
     title: "Project 3",
     description: "Description of Project 3...",

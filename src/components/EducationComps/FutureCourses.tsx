@@ -25,7 +25,7 @@ const FutureCourses: FC<{ data: Array<{courseName: string; courseDesc: string; p
       <Box>
           <Typography variant="h5" sx={{
               padding: "1rem",
-          }}>Past Courses</Typography>
+          }}>Future Courses</Typography>
       </Box>
 
 

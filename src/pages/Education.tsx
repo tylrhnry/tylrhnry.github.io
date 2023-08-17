@@ -18,7 +18,7 @@ import {
     Container,
     Typography,
 } from "@mui/material";
-import PastCoursesList from "../components/EducationComps/PastCoursesList";
+import PastCourses from "../components/EducationComps/PastCourses";
 import FutureCoursesList from "../components/EducationComps/FutureCoursesList";
 
 
@@ -43,7 +43,7 @@ const Education: FC<any> = (): ReactElement => {
           flexDirection: "column",
           padding: "1rem",
         }}>
-          <Typography variant="h3">Education</Typography>
+          <Typography variant="h3" sx={{ display: {md: "none"} }}>Education</Typography>
         </Container>
 
       </Container>
@@ -55,7 +55,7 @@ const Education: FC<any> = (): ReactElement => {
           
       }}>
         <Container sx={{ padding: "1rem" }}>
-          <PastCoursesList/>
+          <PastCourses/>
         </Container>
 
         <Container sx={{ padding: "1rem" }}>
