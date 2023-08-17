@@ -19,7 +19,7 @@ const ProjectsList: React.FC = () => {
       alignItems: "center",
     }}>
       <Container>
-      <Typography variant="h3">Projects</Typography>
+      <Typography variant="h5">Projects</Typography>
       {projectData.map((project, index) => (
         <ProjectTemplate
           key={index}

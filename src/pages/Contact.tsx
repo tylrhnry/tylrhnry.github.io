@@ -23,7 +23,7 @@ const Experience: React.FC = () => {
         <Container sx={{ padding: "1rem" }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
-          }}>Experience</Typography>
+          }}>Contact</Typography>
         </Container>
 
           <Container maxWidth="xl" sx={{

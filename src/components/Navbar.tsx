@@ -15,10 +15,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { routes } from "../routes";
 import { NavLink } from "react-router-dom";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { useLocation } from 'react-router-dom';
 
 
 const Navbar: FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const initialOpenPage = routes.find(page => page.path === currentPath)?.title || null;
+  const [openPage, setOpenPage] = React.useState<string | null>(initialOpenPage);
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -81,10 +87,11 @@ const Navbar: FC = (): ReactElement => {
             >
               {routes.map((page) => (
                 <Link
+                  onClick={() => setOpenPage(page.title)}
                   key={page.key}
                   component={NavLink}
                   to={page.path}
-                  color="black"
+                  color={page.title === openPage ? "gray" : "black"}
                   underline="none"
                   variant="button"
                 >
@@ -119,10 +126,11 @@ const Navbar: FC = (): ReactElement => {
             >
               {routes.map((page) => (
                 <Link
+                  onClick={() => setOpenPage(page.title)}
                   key={page.key}
                   component={NavLink}
                   to={page.path}
-                  color="black"
+                  color={page.title === openPage ? "white" : "black"}
                   underline="none"
                   variant="button"
                   sx={{ 
