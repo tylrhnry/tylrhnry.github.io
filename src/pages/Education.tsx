@@ -3,6 +3,8 @@
 // Scholarships, awards, clubs
  
 // point out that projects alone are on 'experience'
+// nested list colors
+// stop nested list open status from persisting
 
 // Programming projects
     // Tutorial/explanation/requirements
@@ -10,7 +12,6 @@
     // Program simulator
     // Link to github/gitlab
 
-// Get rid of "Education" at the top and color tab?
 
 import React, {ReactElement, FC} from "react";
 import { 
@@ -19,7 +20,7 @@ import {
     Typography,
 } from "@mui/material";
 import PastCourses from "../components/EducationComps/PastCourses";
-import FutureCoursesList from "../components/EducationComps/FutureCoursesList";
+import FutureCourses from "../components/EducationComps/FutureCourses";
 
 
 const Education: FC<any> = (): ReactElement => {
@@ -59,7 +60,7 @@ const Education: FC<any> = (): ReactElement => {
         </Container>
 
         <Container sx={{ padding: "1rem" }}>
-          <FutureCoursesList/>
+          <FutureCourses/>
         </Container>
       </Container>
 

@@ -28,7 +28,7 @@ const PastCourses: React.FC = () => {
       alignItems: "center",
     }}>
       <Container>
-      <Typography variant="h5">Courses</Typography>
+      <Typography variant="h5">Past Courses</Typography>
       {CourseData.map((course, index) => (
         <CourseTemplate
           key={index}

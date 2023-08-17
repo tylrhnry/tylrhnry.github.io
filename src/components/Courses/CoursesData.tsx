@@ -29,11 +29,6 @@ export const FutureCourseData = [
     courseCode: "4150",
     description: "Description of Course 2...",
   },
-  {
-    title: "Course 3",
-    courseCode: "4100",
-    description: "Description of Course 3...",
-  },
   // Add more courses as needed
 ];
   

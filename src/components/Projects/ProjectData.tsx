@@ -48,7 +48,7 @@ export const projectData = [
     title: "Project 6",
     description: "Description of Project 6...",
     githubLink: "https://github.com/project2",
-    course: "3320",
+    course: "339R",
     featured: false,
   },
   // Add more projects as needed

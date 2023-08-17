@@ -1,53 +1,46 @@
 // add grade, desc, & projects
 
 
-import React, {useState, FC} from "react";
+import React, { useState } from "react";
 import {
   Box,
+  Container,
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import { FutureCourseData } from "../Courses/CoursesData";
+import CourseTemplate from "../Courses/CourseTemplate";
 
 
-const FutureCourses: FC<{ data: Array<{courseName: string; courseDesc: string; projects: string[]}> }> = ({data}) => {
+const FutureCourses: React.FC = () => {
   const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
-  const handleExpanding = (index: number) => (event: React.ChangeEvent<{}>,
-                                              isExpanded: boolean) => {
-    setExpanded(isExpanded ? index : null);
-  };    
+  const handleExpanding = (index: number, isExpanded: boolean) => {
+      setExpanded(isExpanded ? index : null);
+  };     
   
   return (
-    <div>
-      <Box>
-          <Typography variant="h5" sx={{
-              padding: "1rem",
-          }}>Future Courses</Typography>
-      </Box>
-
-
-      <div>
-        {data.map((item, index) => (
-          <Accordion
-            key={index}
-            expanded={expandedAccordion === index}
-            onChange={handleExpanding(index)}
-            sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{item.courseName}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{item.courseDesc}</Typography>
-              {/* list out the projects */}
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </div>
-    </div>
+    <Box sx={{
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      <Container>
+      <Typography variant="h5">Future Courses</Typography>
+      {FutureCourseData.map((course, index) => (
+        <CourseTemplate
+          key={index}
+          title={course.title}
+          courseCode={course.courseCode}
+          description={course.description}
+          index={index}
+          isExpanded={index === expandedAccordion}
+          onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
+        />
+      ))}
+      </Container>
+    </Box>
   );
 }
 
