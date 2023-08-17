@@ -11,6 +11,7 @@ import {
   Box, 
   Typography,
   Container,
+  Divider,
 } from "@mui/material";
 import Portrait from "../components/HomeComps/Portrait";
 import BriefWorkHis from "../components/HomeComps/BriefWorkHis";
@@ -54,7 +55,10 @@ const Home: FC<any> = (): ReactElement => {
             ullamcorper ex.
           </Typography>
         </Container>
+      </Container>
 
+      <Container maxWidth="xl" >
+        <Divider sx={{ backgroundColor: "gray", margin: "0 1.5rem" }} />
       </Container>
 
       <Container maxWidth="xl" sx={{
@@ -63,9 +67,7 @@ const Home: FC<any> = (): ReactElement => {
       }}>
           <FeaturedProjects />
           <BriefWorkHis />
-
       </Container>
-
     </Box>
   );
 };
