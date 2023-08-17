@@ -61,13 +61,9 @@ const Home: FC<any> = (): ReactElement => {
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
       }}>
-        <Container sx={{ padding: "1rem" }}>
           <FeaturedProjects />
-        </Container>
-
-        <Container sx={{ padding: "1rem" }}>
           <BriefWorkHis />
-        </Container>
+
       </Container>
 
     </Box>

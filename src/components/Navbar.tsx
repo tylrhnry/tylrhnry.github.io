@@ -44,7 +44,7 @@ const Navbar: FC = (): ReactElement => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              paddingLeft: "3rem",
+              paddingLeft: "3.5rem",
               color: "black"
             }}
           >

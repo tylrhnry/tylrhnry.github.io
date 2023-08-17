@@ -8,7 +8,7 @@ const Portrait: FC<any> = (): ReactElement => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      padding: "1rem"
+      padding: "1.5rem",
       }}
     >
       <img src={imgSrc} alt="Portrait" className="image" 

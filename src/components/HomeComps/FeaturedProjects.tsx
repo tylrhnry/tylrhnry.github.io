@@ -27,20 +27,20 @@ const FeaturedProducts: React.FC = () => {
       alignItems: "center",
     }}>
       <Container>
-      <Typography variant="h5" sx={{
-          padding: "1rem",
+        <Typography variant="h5" sx={{
+            padding: "1rem",
         }}>Featured Projects</Typography>
-      {FeaturedProjects.map((project, index) => (
-        <ProjectTemplate
-          key={index}
-          title={project.title}
-          description={project.description}
-          githubLink={project.githubLink}
-          index={index}
-          isExpanded={index === expandedAccordion}
-          onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
-        />
-      ))}
+        {FeaturedProjects.map((project, index) => (
+          <ProjectTemplate
+            key={index}
+            title={project.title}
+            description={project.description}
+            githubLink={project.githubLink}
+            index={index}
+            isExpanded={index === expandedAccordion}
+            onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
+          />
+        ))}
       </Container>
     </Box>
   );
