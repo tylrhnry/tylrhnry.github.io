@@ -52,5 +52,5 @@ export const projectData = [
 ];
 
 // projects to be displayed on home page
-export const featuredProjects = 
+export const FeaturedProjects = 
               projectData.filter(project => project.featured)

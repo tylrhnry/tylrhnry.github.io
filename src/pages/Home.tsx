@@ -13,8 +13,8 @@ import {
   Container,
 } from "@mui/material";
 import Portrait from "../components/HomeComps/Portrait";
-import BriefWorkHisList from "../components/HomeComps/BriefWorkHisList";
-import FeaturedProjectsList from "../components/HomeComps/FeaturedProjectsList";
+import BriefWorkHis from "../components/HomeComps/BriefWorkHis";
+import FeaturedProjects from "../components/HomeComps/FeaturedProjects";
 
 
 
@@ -62,11 +62,11 @@ const Home: FC<any> = (): ReactElement => {
         flexDirection: { xs: "column", md: "row"},
       }}>
         <Container sx={{ padding: "1rem" }}>
-          <FeaturedProjectsList />
+          <FeaturedProjects />
         </Container>
 
         <Container sx={{ padding: "1rem" }}>
-          <BriefWorkHisList />
+          <BriefWorkHis />
         </Container>
       </Container>
 

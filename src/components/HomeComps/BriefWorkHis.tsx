@@ -1,51 +1,47 @@
 
 
-import React, {useState, FC} from "react";
+import React, { useState } from "react";
 import {
   Box,
+  Container,
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import JobTemplate from "../Jobs/JobTemplate";
+import { FeaturedJobs } from "../Jobs/JobsData";
 
-
-const BriefWorkHis: FC<{ data: Array<{ title: string; content: string; }> }> = ({ data }) => {
-
+const BriefWorkHis: React.FC = () => {
   const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
-  const handleExpanding = (index: number) => (event: React.ChangeEvent<{}>,
-                                              isExpanded: boolean) => {
+  const handleExpanding = (index: number, isExpanded: boolean) => {
     setExpanded(isExpanded ? index : null);
   };
 
 
   return (
-    <div>
-      <Box>
-        <Typography variant="h5" sx={{
+
+    <Box sx={{
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "top",
+      alignItems: "center",
+    }}>
+      <Container>
+      <Typography variant="h5" sx={{
           padding: "1rem",
         }}>Brief Work History</Typography>
-      </Box>
-      <div>
-        {data.map((item, index) => (
-          <Accordion
-            key={index}
-            expanded={expandedAccordion === index}
-            onChange={handleExpanding(index)}
-            sx={{ backgroundColor: index % 2 === 0 ? "lightgrey" : "whitesmoke", }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{item.title}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{item.content}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </div>
-    </div>
+      {FeaturedJobs.map((job, index) => (
+        <JobTemplate
+          key={index}
+          title={job.title}
+          description={job.description}
+          index={index}
+          isExpanded={index === expandedAccordion}
+          onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
+        />
+      ))}
+      </Container>
+    </Box>
   );
 }
 

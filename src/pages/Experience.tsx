@@ -11,7 +11,7 @@ import {
   Container,
   Typography,
 } from "@mui/material";
-import ProjectsPage from "../components/ExperienceComps/ProjectsList";
+import ProjectsList from "../components/ExperienceComps/ProjectsList";
 
 
 
@@ -38,7 +38,7 @@ const Experience: React.FC = () => {
             flexDirection: "column",
             padding: "1rem",
           }}>
-            <ProjectsPage/>
+            <ProjectsList/>
         </Container>
       </Container>
     </Box>

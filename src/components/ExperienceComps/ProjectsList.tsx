@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Box, Container, Typography } from "@mui/material";
-import ProjectTemplate from "../Projects.tsx/ProjectTemplate";
-import { projectData } from "../Projects.tsx/ProjectData";
+import ProjectTemplate from "../Projects/ProjectTemplate";
+import { projectData } from "../Projects/ProjectData";
 
-const ProjectsPage: React.FC = () => {
-  const [expandedAccordion, setExpandedAccordion] = useState<number | null>(null);
+const ProjectsList: React.FC = () => {
+  const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
-  const handleExpandChange = (index: number, isExpanded: boolean) => {
-      setExpandedAccordion(isExpanded ? index : null);
+  const handleExpanding = (index: number, isExpanded: boolean) => {
+      setExpanded(isExpanded ? index : null);
   };
 
   return (
     <Box sx={{
       flexGrow: 1,
-      // backgroundColor: "whitesmoke",
       display: "flex",
       flexDirection: "column",
       justifyContent: "top",
@@ -29,7 +28,7 @@ const ProjectsPage: React.FC = () => {
           githubLink={project.githubLink}
           index={index}
           isExpanded={index === expandedAccordion}
-          onExpandChange={(isExpanded) => handleExpandChange(index, isExpanded)}
+          onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
         />
       ))}
       </Container>
@@ -37,4 +36,4 @@ const ProjectsPage: React.FC = () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectsList;

@@ -1,5 +1,5 @@
-// Provides the template where project info is passed to return a 
-// single accordion element with the project details
+// Provides the template where job info is passed to return a 
+// single accordion element with the job details
 
 import React, { FC } from "react";
 import {
@@ -8,22 +8,21 @@ import {
   AccordionDetails,
   Typography,
   Link,
+  Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-interface ProjectProps {
+interface JobProps {
   title: string;
   description: string;
-  githubLink: string;
   index: number;
   isExpanded: boolean;
   onExpandChange: (isExpanded: boolean) => void;
 }
 
-const ProjectTemplate: FC<ProjectProps> = ({
+const JobTemplate: FC<JobProps> = ({
   title,
   description,
-  githubLink,
   index,
   isExpanded,
   onExpandChange,
@@ -41,12 +40,9 @@ const ProjectTemplate: FC<ProjectProps> = ({
       </AccordionSummary>
       <AccordionDetails>
         <Typography>{description}</Typography>
-        <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-          View on GitHub
-        </Link>
       </AccordionDetails>
     </Accordion>
   );
 };
 
-export default ProjectTemplate;
+export default JobTemplate;
