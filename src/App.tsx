@@ -6,6 +6,7 @@ import { routes as appRoutes } from "./routes";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BackToTopButton from './components/BackToTopButton';
+import { Padding } from '@mui/icons-material';
 
 
 function App() {
@@ -15,14 +16,14 @@ function App() {
       primary: {
         light: "#63b8ff",
         main: "#0989e3",
-        dark: "#ff",
-        contrastText: "#000",
+        // dark: "#ff",
+        // contrastText: "#000",
       },
       secondary: {
-        main: "#4db6ac",
+        main: "#669999", // color of nav & footer
         light: "#82e9de",
         dark: "#00867d",
-        contrastText: "#000",
+        // contrastText: "#000",
       },
     },
   })
@@ -33,15 +34,17 @@ function App() {
       <Box height="100vh" display="flex" flexDirection="column">
         <Router>
           <Navbar/>
-          <Routes>
-            {appRoutes.map((route) => (
-              <Route
-                key={route.key}
-                path={route.path}
-                element={<route.component />}
-              />
-            ))}
-          </Routes>
+            <div style={{paddingTop: "4rem", flex: 1, }}>
+            <Routes>
+              {appRoutes.map((route) => (
+                <Route
+                  key={route.key}
+                  path={route.path}
+                  element={<route.component />}
+                />
+              ))}
+            </Routes>
+            </div>
           <BackToTopButton/>
           <Footer/>
         </Router>

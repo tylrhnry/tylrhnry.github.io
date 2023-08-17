@@ -40,6 +40,7 @@ const Navbar: FC = (): ReactElement => {
         width: "100%",
         height: "auto",
         backgroundColor: "secondary.main",
+        position: "fixed",
       }}
     >
       <Container maxWidth="xl">

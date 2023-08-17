@@ -5,6 +5,7 @@
 // point out that projects alone are on 'experience'
 // nested list colors
 // stop nested list open status from persisting
+// add semester labels near courses
 
 // Programming projects
     // Tutorial/explanation/requirements
@@ -43,8 +44,12 @@ const Education: FC<any> = (): ReactElement => {
           display: "flex",
           flexDirection: "column",
           padding: "1rem",
+          alignItems: "center",
         }}>
-          <Typography variant="h3" sx={{ display: {md: "none"} }}>Education</Typography>
+          <Typography variant="h3" sx={{ 
+            display: {md: "none"},
+          }}>
+            Education</Typography>
         </Container>
 
       </Container>

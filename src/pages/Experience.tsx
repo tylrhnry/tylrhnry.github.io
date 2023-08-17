@@ -30,6 +30,7 @@ const Experience: React.FC = () => {
         <Container sx={{ padding: "1rem" }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
+            alignItems: "center",
           }}>Experience</Typography>
         </Container>
 

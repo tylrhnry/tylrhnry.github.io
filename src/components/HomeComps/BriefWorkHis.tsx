@@ -26,10 +26,10 @@ const BriefWorkHis: React.FC = () => {
       justifyContent: "top",
       alignItems: "center",
     }}>
-      <Container>
-      <Typography variant="h5" sx={{
-          padding: "1rem",
-        }}>Brief Work History</Typography>
+      <Container sx={{
+          paddingTop: "1rem",
+        }}>
+      <Typography variant="h5" >Brief Work History</Typography>
       {FeaturedJobs.map((job, index) => (
         <JobTemplate
           key={index}

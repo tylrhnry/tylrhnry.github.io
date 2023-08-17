@@ -41,9 +41,10 @@ const Home: FC<any> = (): ReactElement => {
           display: "flex",
           flexDirection: "column",
           padding: "1rem",
+          alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
-            display: {md: "none"}
+            display: {md: "none"},
           }}>Home</Typography>
           <Typography sx={{ paddingTop: {xs: "1rem", md: "2rem" } }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -64,6 +65,7 @@ const Home: FC<any> = (): ReactElement => {
       <Container maxWidth="xl" sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
+        padding: "1rem",
       }}>
           <FeaturedProjects />
           <BriefWorkHis />

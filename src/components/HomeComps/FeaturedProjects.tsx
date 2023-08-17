@@ -26,10 +26,10 @@ const FeaturedProducts: React.FC = () => {
       justifyContent: "top",
       alignItems: "center",
     }}>
-      <Container>
-        <Typography variant="h5" sx={{
+      <Container sx={{
             padding: "1rem",
-        }}>Featured Projects</Typography>
+        }}>
+        <Typography variant="h5" >Featured Projects</Typography>
         {FeaturedProjects.map((project, index) => (
           <ProjectTemplate
             key={index}
