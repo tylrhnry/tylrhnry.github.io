@@ -6,27 +6,33 @@ import { routes as appRoutes } from "./routes";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BackToTopButton from './components/BackToTopButton';
-import { Padding } from '@mui/icons-material';
 
 
 function App() {
 
   const theme = createTheme({
     palette: {
+      background: {
+        default: '#111', // dark mode
+        paper:   '#eee', // light mode
+      },
       primary: {
-        light: "#63b8ff",
-        main: "#0989e3",
-        // dark: "#ff",
-        // contrastText: "#000",
+        main:  '#699', // nav & footer
+        light: '#eee', // tab 1
+        dark:  '#ccc', // tab 2
       },
       secondary: {
-        main: "#669999", // color of nav & footer
-        light: "#82e9de",
-        dark: "#00867d",
-        // contrastText: "#000",
+        main:  '#699', // buttons/links
+        light: '#aaa', // nested tab 1
+        dark:  '#888', // nested tab 2
       },
-    },
-  })
+      text: {
+        primary:   '#000',
+        secondary: '#fff', // selected tab
+      },
+    }
+  });
+
 
   return (
     <ThemeProvider theme={theme}>

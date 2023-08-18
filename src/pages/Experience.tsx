@@ -27,10 +27,14 @@ const Experience: React.FC = () => {
       <Container maxWidth="xl" sx={{
         padding: "1rem",
       }}>
-        <Container sx={{ padding: "1rem" }}>
+        <Container sx={{ 
+          display: "flex",
+          flexDirection: "column",
+          padding: "1rem",
+          alignItems: "center",
+        }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
-            alignItems: "center",
           }}>Experience</Typography>
         </Container>
 

@@ -39,7 +39,7 @@ const Navbar: FC = (): ReactElement => {
       sx={{
         width: "100%",
         height: "auto",
-        backgroundColor: "secondary.main",
+        backgroundColor: "primary.main",
         position: "fixed",
       }}
     >
@@ -52,7 +52,7 @@ const Navbar: FC = (): ReactElement => {
               mr: 2,
               display: { xs: "none", md: "flex" },
               paddingLeft: "3.5rem",
-              color: "black"
+              color: "text.primary"
             }}
           >
             Tyler Henry
@@ -110,7 +110,7 @@ const Navbar: FC = (): ReactElement => {
             sx={{ 
               flexGrow: 1, 
               display: { xs: "flex", md: "none" },
-              color: "black",
+              color: "text.primary",
              }}
           >
             Tyler Henry
@@ -131,7 +131,7 @@ const Navbar: FC = (): ReactElement => {
                   key={page.key}
                   component={NavLink}
                   to={page.path}
-                  color={page.title === openPage ? "white" : "black"}
+                  color={page.title === openPage ? "text.secondary" : "text.primary"}
                   underline="none"
                   variant="button"
                   sx={{ 

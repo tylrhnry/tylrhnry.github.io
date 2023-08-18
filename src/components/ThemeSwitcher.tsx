@@ -19,11 +19,11 @@ const ThemeSwitcher = () => {
 
   const paletteType = darkMode ? "dark" : "light";
   const paletteColors = {
-    primary: {
-      main: paletteType == "dark" ? "#ffddcc" : "#3f51b5",
+    background: {
+      default: paletteType == "dark" ? "#111" : "#eee",
     },
-    secondary: {
-      main: paletteType == "dark" ? "#eec107" : "#3f50057",
+    text: {
+      primary: paletteType == "dark" ? "#eee" : "#111",
     },
   }
 

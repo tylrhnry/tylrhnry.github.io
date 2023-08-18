@@ -18,9 +18,13 @@ const Experience: React.FC = () => {
       alignItems: "center",
     }}>
       <Container maxWidth="xl" sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row"},
         padding: "1rem",
       }}>
-        <Container sx={{ 
+        <Container sx={{
+          display: "flex",
+          flexDirection: "column",
           padding: "1rem",
           alignItems: "center",
         }}>
