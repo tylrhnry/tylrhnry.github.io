@@ -18,7 +18,7 @@ function App() {
       primary: {
         main:  '#819c71', // nav & footer
         light: '#FFF',    // tab 1
-        dark:  '#bbb',    // tab 2
+        dark:  '#CCC',    // tab 2
       },
       secondary: {
         main:  '#447777', // buttons/links
