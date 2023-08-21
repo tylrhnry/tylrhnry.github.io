@@ -36,6 +36,7 @@ const BriefWorkHis: React.FC = () => {
           title={job.title}
           description={job.description}
           index={index}
+          nestLevel={0}
           isExpanded={index === expandedAccordion}
           onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
         />

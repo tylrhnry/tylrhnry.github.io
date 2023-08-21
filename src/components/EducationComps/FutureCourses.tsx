@@ -35,6 +35,7 @@ const FutureCourses: React.FC = () => {
           courseCode={course.courseCode}
           description={course.description}
           index={index}
+          nestLevel={0}
           isExpanded={index === expandedAccordion}
           onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
         />

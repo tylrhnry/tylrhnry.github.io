@@ -17,6 +17,7 @@ interface ProjectProps {
   description: string;
   githubLink: string;
   index: number;
+  nestLevel: number;
   isExpanded: boolean;
   onExpandChange: (isExpanded: boolean) => void;
 }
@@ -26,10 +27,16 @@ const ProjectTemplate: FC<ProjectProps> = ({
   description,
   githubLink,
   index,
+  nestLevel,
   isExpanded,
   onExpandChange,
 }) => {
-  const color = index % 2 === 0 ? "lightgrey" : "whitesmoke";
+
+  if (nestLevel % 2 == 0) {
+    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  } else {
+    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+  }
 
   return (
     <Accordion 
@@ -46,8 +53,19 @@ const ProjectTemplate: FC<ProjectProps> = ({
           href={githubLink}
           target = "_blank"
           rel="noopener noreferrer"
-          underline="hover">
-          <Button variant="contained">View on GitHub</Button>
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "1rem",
+
+          }}>          
+          <Button variant="contained" sx={{
+            backgroundColor: "secondary.main",
+            '&:hover': {
+              backgroundColor: "primary.main"
+            }
+          }}>View on GitHub</Button>
         </Link>
       </AccordionDetails>
     </Accordion>

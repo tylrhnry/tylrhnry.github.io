@@ -16,6 +16,7 @@ interface JobProps {
   title: string;
   description: string;
   index: number;
+  nestLevel: number;
   isExpanded: boolean;
   onExpandChange: (isExpanded: boolean) => void;
 }
@@ -24,10 +25,16 @@ const JobTemplate: FC<JobProps> = ({
   title,
   description,
   index,
+  nestLevel,
   isExpanded,
   onExpandChange,
 }) => {
-  const color = index % 2 === 0 ? "lightgrey" : "whitesmoke";
+  
+  if (nestLevel % 2 == 0) {
+    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  } else {
+    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+  }
 
   return (
     <Accordion 

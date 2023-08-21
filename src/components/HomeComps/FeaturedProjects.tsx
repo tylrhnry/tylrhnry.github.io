@@ -37,6 +37,7 @@ const FeaturedProducts: React.FC = () => {
             description={project.description}
             githubLink={project.githubLink}
             index={index}
+            nestLevel={0}
             isExpanded={index === expandedAccordion}
             onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
           />

@@ -16,6 +16,7 @@ interface CourseProps {
   courseCode: string;
   description: string;
   index: number;
+  nestLevel: number;
   isExpanded: boolean;
   onExpandChange: (isExpanded: boolean) => void;
 }
@@ -25,10 +26,16 @@ const CourseTemplate: FC<CourseProps> = ({
   courseCode,
   description,
   index,
+  nestLevel,
   isExpanded,
   onExpandChange,
 }) => {
-  const color = index % 2 === 0 ? "lightgrey" : "whitesmoke";
+  
+  if (nestLevel % 2 == 0) {
+    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  } else {
+    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+  }
 
   const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
@@ -56,6 +63,7 @@ const CourseTemplate: FC<CourseProps> = ({
               description={project.description}
               githubLink={project.githubLink}
               index={index}
+              nestLevel={1}
               isExpanded={index === expandedAccordion}
               onExpandChange={(isExpanded) => handleExpanding(index, isExpanded)}
             />

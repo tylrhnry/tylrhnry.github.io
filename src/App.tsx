@@ -14,21 +14,20 @@ function App() {
     palette: {
       background: {
         default: '#111', // dark mode
-        paper:   '#eee', // light mode
       },
       primary: {
-        main:  '#699', // nav & footer
-        light: '#eee', // tab 1
-        dark:  '#ccc', // tab 2
+        main:  '#819c71', // nav & footer
+        light: '#FFF',    // tab 1
+        dark:  '#bbb',    // tab 2
       },
       secondary: {
-        main:  '#699', // buttons/links
-        light: '#aaa', // nested tab 1
-        dark:  '#888', // nested tab 2
+        main:  '#447777', // buttons/links
+        light: '#9c7181', // nested tab 1
+        dark:  '#71819c', // nested tab 2
       },
       text: {
-        primary:   '#000',
-        secondary: '#fff', // selected tab
+        primary:   '#111',
+        secondary: '#eee', // selected tab
       },
     }
   });
