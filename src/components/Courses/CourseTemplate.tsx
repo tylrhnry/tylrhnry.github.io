@@ -31,10 +31,11 @@ const CourseTemplate: FC<CourseProps> = ({
   onExpandChange,
 }) => {
   
-  if (nestLevel % 2 == 0) {
-    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  var color;
+  if (nestLevel % 2 === 0) {
+    color = index % 2 === 0 ? "primary.light" : "primary.dark";
   } else {
-    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+    color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
   }
 
   const [expandedAccordion, setExpanded] = useState<number | null>(null);

@@ -7,8 +7,6 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
-  Link,
-  Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -30,10 +28,11 @@ const JobTemplate: FC<JobProps> = ({
   onExpandChange,
 }) => {
   
-  if (nestLevel % 2 == 0) {
-    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  var color;
+  if (nestLevel % 2 === 0) {
+    color = index % 2 === 0 ? "primary.light" : "primary.dark";
   } else {
-    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+    color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
   }
 
   return (

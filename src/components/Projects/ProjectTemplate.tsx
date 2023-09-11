@@ -32,10 +32,11 @@ const ProjectTemplate: FC<ProjectProps> = ({
   onExpandChange,
 }) => {
 
-  if (nestLevel % 2 == 0) {
-    var color = index % 2 === 0 ? "primary.light" : "primary.dark";
+  var color;
+  if (nestLevel % 2 === 0) {
+    color = index % 2 === 0 ? "primary.light" : "primary.dark";
   } else {
-    var color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
+    color = index % 2 === 0 ? "secondary.light" : "secondary.dark";
   }
 
   return (
@@ -58,14 +59,19 @@ const ProjectTemplate: FC<ProjectProps> = ({
             flexDirection: "column",
             alignItems: "center",
             paddingTop: "1rem",
-
+            textDecoration: "none",
           }}>          
-          <Button variant="contained" sx={{
-            backgroundColor: "secondary.main",
-            '&:hover': {
-              backgroundColor: "primary.main"
-            }
-          }}>View on GitHub</Button>
+          <Button variant="contained" 
+                  sx={{
+                    backgroundColor: "secondary.main",
+                    '&:hover': {
+                      backgroundColor: "primary.main",
+                    },
+                    display: "flex",
+                    alignItems: "center",
+                    paddingTop: "0.6rem",
+                  }}>
+            View on GitHub</Button>
         </Link>
       </AccordionDetails>
     </Accordion>
