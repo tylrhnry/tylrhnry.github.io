@@ -22,6 +22,8 @@
                     create-react-app
                     nodejs_22
                     yarn
+                    yarn2nix
+                    typescript
                 ];
 
                 shellHook = ''
