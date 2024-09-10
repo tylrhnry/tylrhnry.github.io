@@ -9,23 +9,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
-    <script>
-      (function() {
-        // Get the current path from the URL
-        var path = window.location.pathname;
-        
-        // Redirect to the base URL but preserve the path
-        if (path !== '/') {
-          // We use 'window.location.replace' to avoid adding this redirect to the history stack
-          window.location.replace('/?redirect=' + encodeURIComponent(path));
-        } else {
-          window.location.replace('/');
-        }
-      })();
-    </script>
+    <meta http-equiv="refresh" content="0; URL=/" />
   </head>
   <body>
   </body>
