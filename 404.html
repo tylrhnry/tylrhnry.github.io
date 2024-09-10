@@ -9,7 +9,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect to the root of the site while preserving the current path
+      (function() {
+        var currentPath = window.location.pathname;
+        var newPath = currentPath === '/' ? '/' : currentPath;
+        window.location.replace('/index.html' + newPath);
+      })();
+    </script>
   </head>
   <body>
   </body>
