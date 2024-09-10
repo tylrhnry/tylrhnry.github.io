@@ -1,6 +1,4 @@
-
-
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement, useEffect } from "react";
 import {
   Box,
   Link,
@@ -20,19 +18,15 @@ import { useLocation } from 'react-router-dom';
 
 const Navbar: FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const handleOpenNavMenu = (event: any) => { setAnchorElNav(event.currentTarget); };
+  const handleCloseNavMenu = () => { setAnchorElNav(null); };
 
   const location = useLocation();
   const currentPath = location.pathname;
-  const initialOpenPage = routes.find(page => page.path === currentPath)?.title || null;
-  const [openPage, setOpenPage] = React.useState<string | null>(initialOpenPage);
-
-  const handleOpenNavMenu = (event: any) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const [openPage, setOpenPage] = React.useState<string | null>(null);
+  useEffect(() => {
+    setOpenPage(routes.find(page => page.path === currentPath)?.title || null);
+  }, [currentPath]);
 
   return (
     <Box

@@ -7,3 +7,4 @@ To update dependencies, add them to the flake.nix file, if necessary. Then you c
 This updates the yarn.lock file, so to have nix keep the build reproducible, you can run `yarn2nix > yarn.nix`. This lets nix keep track of everything declaratively/reproducibly. 
 
 Run `yarn build` to build the app for production and put in the build folder
+Run `yarn deploy` to deploy the app to github and have the changes reflected in the site link

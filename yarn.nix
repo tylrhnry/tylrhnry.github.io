@@ -346,6 +346,14 @@
       };
     }
     {
+      name = "_babel_plugin_proposal_private_property_in_object___plugin_proposal_private_property_in_object_7.21.11.tgz";
+      path = fetchurl {
+        name = "_babel_plugin_proposal_private_property_in_object___plugin_proposal_private_property_in_object_7.21.11.tgz";
+        url  = "https://registry.yarnpkg.com/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.11.tgz";
+        sha512 = "0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==";
+      };
+    }
+    {
       name = "_babel_plugin_syntax_async_generators___plugin_syntax_async_generators_7.8.4.tgz";
       path = fetchurl {
         name = "_babel_plugin_syntax_async_generators___plugin_syntax_async_generators_7.8.4.tgz";
