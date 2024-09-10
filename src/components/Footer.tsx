@@ -15,7 +15,7 @@ export const Footer: FC = (): ReactElement => {
         <Grid container direction="column" alignItems="center">
           <Grid item xs={12}>
             <Typography color="text.primary" variant="subtitle1">
-              {`${new Date().getFullYear()} | React | Material UI | React Router`}
+              {`${new Date().getFullYear()} | React | Material UI`}
             </Typography>
           </Grid>
         </Grid>

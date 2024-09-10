@@ -14,10 +14,6 @@
 
         in {
             devShell = pkgs.mkShell {
-                # nativeBuildInputs = with pkgs; [
-                #     yarn
-                # ];
-
                 buildInputs = with pkgs; [
                     create-react-app
                     nodejs_22
