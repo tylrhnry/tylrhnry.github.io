@@ -8,36 +8,9 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL=/" />
-  <title>404 Not Found</title>
-  <script>
-    // Function to map URLs to specific routes in your React app
-    function getRedirectUrl(path) {
-      // Define the mapping of URL paths to React routes
-      const routeMap = {
-        '/home': '/home',
-        'experience': '/experience',
-        'education': '/education',
-        '/contact': '/contact',
-      };
-
-      // Default to home if path not found
-      return routeMap[path] || '/home';
-    }
-
-    // Function to perform the redirection
-    function redirect() {
-      const path = window.location.pathname;
-      const redirectUrl = getRedirectUrl(path);
-      window.location.replace(redirectUrl);
-    }
-
-    // Execute redirection when the script loads
-    redirect();
-  </script>
-</head>
-<body>
-</body>
+  <head>
+    <meta http-equiv="refresh" content="0; URL=/" />
+  </head>
+  <body>
+  </body>
 </html>
