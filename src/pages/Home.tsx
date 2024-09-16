@@ -54,6 +54,17 @@ const Home: FC<any> = (): ReactElement => {
             Donec nec justo vel elit aliquet fermentum nec ut tellus. 
             Fusce vestibulum, justo nec auctor facilisis, libero metus 
             ullamcorper ex.
+            <br/>
+            <br/>
+            Hello! I'm Tyler Henry, and I'm passionate about functional software.<br/>
+            I love software that interacts with the real world.<br/>
+            <br/>
+            Consistently trying to learn new things has introduced me to some of the best tools.<br/>
+            Rust, Nix, Neovim, SDR, textbooks<br/>
+            Hardware integration. (radios, cameras, drones, sensors)<br/>
+            I have deployed many lora nodes, including a remote, solar-powered repeater.<br/>
+            I am currently bringing a VTOL design to CAD.<br/>
+            
           </Typography>
         </Container>
       </Container>

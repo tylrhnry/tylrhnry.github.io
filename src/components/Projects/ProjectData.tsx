@@ -4,6 +4,20 @@
 
 // add lists that hold projects organized by course?
 // just filter for if course === {course we want to display}?
+//
+// compiler, assembler, emulator
+// missile defense system
+// deep learning behavior analysis
+// gps spoofing detection
+// 
+// school projects:
+//  rust stuff
+//  c++ stuff
+//  python stuff
+//  analysis of algorithms
+//  numerical software dev
+//  data structures & algos
+//
 
 export const projectData = [
   // 3060 projects

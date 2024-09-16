@@ -54,18 +54,33 @@ const Education: FC<any> = (): ReactElement => {
 
       </Container>
 
-      <Container maxWidth="xl" sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row"},
-          padding: "1rem",
-          
-      }}>
-        <Container sx={{ padding: "1rem" }}>
-          <PastCourses/>
+      <Container>
+        <Container>
+          {/*Summary of school*/}
+          <Typography>
+            UVU logo image <br/>
+            Degree: Bachelor's of Science, Computer Science<br/>
+            GPA: 3.95/4.0 <br/>
+            Credits: 120 completed, 15 in progress <br/>
+            Dates: Jan. 2021 - Dec. 2024 <br/>
+            View transcripts <br/>
+
+          </Typography>
         </Container>
 
-        <Container sx={{ padding: "1rem" }}>
-          <FutureCourses/>
+        <Container maxWidth="xl" sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row"},
+            padding: "1rem",
+            
+        }}>
+          <Container sx={{ padding: "1rem" }}>
+            <PastCourses/>
+          </Container>
+
+          <Container sx={{ padding: "1rem" }}>
+            <FutureCourses/>
+          </Container>
         </Container>
       </Container>
 
