@@ -1,17 +1,22 @@
 
 export const JobData = [
     {
-      title: "Job 1",
+      title: "Radar Researcher",
       description: "Description of Project 1...",
       featured: true,
     },
     {
-      title: "Job 2",
+      title: "Full-Stack Developer",
       description: "Description of Project 2...",
       featured: true,
     },
     {
-      title: "Job 3",
+      title: "Student Engineer",
+      description: "Description of Project 3...",
+      featured: true,
+    },
+    {
+      title: "Engineering Intern",
       description: "Description of Project 3...",
       featured: true,
     },
