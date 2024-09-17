@@ -19,29 +19,31 @@
 //  data structures & algos
 //
 
+//
+
 export const projectData = [
   // 3060 projects
   {
-    title: "Project 1",
-    description: "Description of Project 1...",
+    title: "Virtual Machine",
+    description: "I wrote a program in C++ that can read byte code (binary data) and execute it as if it is the hardware of a machine. This virtual machine implemented three different caching types that are implemented \"in hardware\" and abstracted from the assembly programmer. Cmake and Google testing framework were used for building and testing.",
     githubLink: "https://github.com/project1",
-    course: "3060",
+    course: "4380",
     featured: true,
   },
   {
-    title: "Project 2",
-    description: "Description of Project 2...",
+    title: "Assembler",
+    description: "Written in Python, this assembler targets the virtual machine I wrote in C++ and converts assembly code into bytecode. It does error checking of the assembly code, implements a traditional stack and heap memory model. Example programs demonstrate the use of stack frames, recursion, heap memory management.",
     githubLink: "https://github.com/project2",
-    course: "3060",
+    course: "4380",
     featured: true,
   },
 
   // 3320 projects
   {
-    title: "Project 3",
-    description: "Description of Project 3...",
+    title: "Compiler",
+    description: "Written in Rust, this compiler was written from scratch to do the lexing, parsing, ... of a language with the most common features of the C++ programming language and convert it into assembly language that targets the assembler I wrote as part of the precursor class.",
     githubLink: "https://github.com/project1",
-    course: "3320",
+    course: "4490",
     featured: false,
   },
   {
