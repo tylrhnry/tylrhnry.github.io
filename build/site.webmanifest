@@ -8,8 +8,9 @@
     "theme_color":"#ffffff",
     "background_color":"#ffffff",
     "display":"standalone",
+
     "permissions":[
         "identity",
-        "tylrhnry.gitlab.io"
+        "tylrhnry.gitlab.io/portfolio"
     ]
 }
