@@ -22,29 +22,6 @@
 //
 
 export const projectData = [
-  // 3060 projects
-  {
-    title: "Virtual Machine",
-    description: "I wrote a program in C++ that can read byte code (binary data) and execute it as if it is the hardware of a machine. This virtual machine implemented three different caching types that are implemented \"in hardware\" and abstracted from the assembly programmer. Cmake and Google testing framework were used for building and testing.",
-    githubLink: "https://github.com/project1",
-    course: "4380 (Advanced Computer Architecture and Assembly)",
-    featured: true,
-  },
-  {
-    title: "Assembler",
-    description: "Written in Python, this assembler targets the virtual machine I wrote in C++ and converts assembly code into bytecode. It does error checking of the assembly code, implements a traditional stack and heap memory model. Example programs demonstrate the use of stack frames, recursion, heap memory management.",
-    githubLink: "https://github.com/project2",
-    course: "4380 (Advanced Computer Architecture and Assembly)",
-    featured: true,
-  },
-  {
-    title: "Compiler",
-    description: "*In Progress*\n\
-    Written in Rust, this compiler was written from scratch to do the lexing, parsing, ... of a language with the most common features of the C++ programming language and convert it into assembly language that targets the assembler I wrote as part of the precursor class.",
-    githubLink: "https://github.com/project1",
-    course: "4490 (Compiler Construction)",
-    featured: true,
-  },
   {
     title: "GPS Spoofing Detection",
     description: "I wrote a Rust program that when coupled with commone drone hardware (GPS and IMU) can work to detect artificial GPS signals meant to attack the drone. The program performs an integration on the accelerometer and gyroscope readings to estimate it's relative position since the last verified location. If the new location is within the margin of error of the received GPS readings, we assume the drone is still receiving accurate GPS data. If the drone starts receiving GPS data that suggests it has been moving contrary to what the IMU has measured, we assume the GPS data is inaccurate. When validation is frequently performed, the sensor error can be continuously removed, leading to more accurate detection of adversarial signals.",
@@ -58,6 +35,27 @@ export const projectData = [
     githubLink: "https://github.com/project1",
     course: "Personal",
     featured: true,
+  },
+  {
+    title: "Compiler - *In Progress*",
+    description: "Written in Rust, this compiler was written from scratch to do the lexing, parsing, ... of a language with the most common features of the C++ programming language and convert it into assembly language that targets the assembler I wrote as part of the precursor class.",
+    githubLink: "https://github.com/project1",
+    course: "4490 (Compiler Construction)",
+    featured: true,
+  },
+  {
+    title: "Assembler",
+    description: "Written in Python, this assembler targets the virtual machine I wrote in C++ and converts assembly code into bytecode. It does error checking of the assembly code, implements a traditional stack and heap memory model. Example programs demonstrate the use of stack frames, recursion, heap memory management.",
+    githubLink: "https://github.com/project2",
+    course: "4380 (Advanced Computer Architecture and Assembly)",
+    featured: false,
+  },
+  {
+    title: "Virtual Machine",
+    description: "I wrote a program in C++ that can read byte code (binary data) and execute it as if it is the hardware of a machine. This virtual machine implemented three different caching types that are implemented \"in hardware\" and abstracted from the assembly programmer. Cmake and Google testing framework were used for building and testing.",
+    githubLink: "https://github.com/project1",
+    course: "4380 (Advanced Computer Architecture and Assembly)",
+    featured: false,
   },
   {
     title: "Rust-C++ binding",

@@ -8,3 +8,7 @@ This updates the yarn.lock file, so to have nix keep the build reproducible, you
 
 Run `yarn build` to build the app for production and put in the build folder
 Run `yarn deploy` to deploy the app to github and have the changes reflected in the site link
+
+
+### Bugs
+

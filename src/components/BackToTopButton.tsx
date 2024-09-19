@@ -36,10 +36,10 @@ const BackToTopButton: React.FC = () => {
             bottom: "20px",
             right: "20px",
             zIndex: 1000,
-            backgroundColor: "primary.main",
+            backgroundColor: "secondary.light",
             color: "white",
             "&:hover": {
-                backgroundColor: "secondary.light",
+                backgroundColor: "primary.main",
             }
           }}
         >

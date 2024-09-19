@@ -34,11 +34,11 @@ const Navbar: FC = (): ReactElement => {
         width: "100%",
         height: "auto",
         backgroundColor: "primary.main",
-        position: "fixed",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <Link component={NavLink} to={"/home"} rel="noopener noreferrer">
           <Typography
             variant="h4"
             noWrap
@@ -51,6 +51,7 @@ const Navbar: FC = (): ReactElement => {
           >
             Tyler Henry
           </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none", } }}>
             <IconButton
               size="large"

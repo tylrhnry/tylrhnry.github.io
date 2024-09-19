@@ -33,31 +33,26 @@ const Education: FC<any> = (): ReactElement => {
       justifyContent: "top",
       alignItems: "center",
     }}>
-      {/* consolodate the maxWidth into 1 container */}
+      {/* consolidate the maxWidth into 1 container */}
       <Container maxWidth="xl" sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
         padding: "1rem",
+        alignItems: "center",
       }}>
-
-        <Container sx={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "1rem",
-          alignItems: "center",
-        }}>
           <Typography variant="h3" sx={{ 
             display: {md: "none"},
           }}>
             Education</Typography>
-        </Container>
 
       </Container>
 
       <Container>
         <Container>
           {/*Summary of school*/}
-          <Typography>
+          <Typography sx={{
+            margin: "0.5rem",
+          }}>
             UVU logo image <br/>
             Degree: Bachelor's of Science, Computer Science<br/>
             GPA: 3.95/4.0 <br/>
@@ -72,15 +67,16 @@ const Education: FC<any> = (): ReactElement => {
             display: "flex",
             flexDirection: { xs: "column", md: "row"},
             padding: "1rem",
-            
         }}>
-          <Container sx={{ padding: "1rem" }}>
-            <PastCourses/>
-          </Container>
 
-          <Container sx={{ padding: "1rem" }}>
+          <div style={{ flex: 1, margin: "0.5rem" }}>
+            <PastCourses/>
+          </div>
+
+          <div style={{ flex: 1, margin: "0.5rem" }}>
             <FutureCourses/>
-          </Container>
+          </div>
+
         </Container>
       </Container>
 

@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {
   Box,
@@ -7,9 +5,9 @@ import {
   Typography,
 } from "@mui/material";
 import JobTemplate from "../Jobs/JobTemplate";
-import { FeaturedJobs } from "../Jobs/JobsData";
+import { JobData } from "../Jobs/JobsData";
 
-const BriefWorkHis: React.FC = () => {
+const WorkHist: React.FC = () => {
   const [expandedAccordion, setExpanded] = useState<number | null>(null);
 
   const handleExpanding = (index: number, isExpanded: boolean) => {
@@ -29,8 +27,8 @@ const BriefWorkHis: React.FC = () => {
       <Container sx={{
           paddingTop: "1rem",
         }}>
-      <Typography variant="h5" >Brief Work History</Typography>
-      {FeaturedJobs.map((job, index) => (
+      <Typography variant="h5" >Work History</Typography>
+      {JobData.map((job, index) => (
         <JobTemplate
           key={index}
           title={job.title}
@@ -47,4 +45,4 @@ const BriefWorkHis: React.FC = () => {
 }
 
 
-export default BriefWorkHis;
+export default WorkHist;

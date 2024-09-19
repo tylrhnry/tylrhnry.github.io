@@ -11,6 +11,7 @@ import {
   Container,
   Typography,
 } from "@mui/material";
+import WorkHist from "../components/ExperienceComps/WorkHist";
 import ProjectsList from "../components/ExperienceComps/ProjectsList";
 
 
@@ -25,12 +26,13 @@ const Experience: React.FC = () => {
       alignItems: "center",
     }}>
       <Container maxWidth="xl" sx={{
-        padding: "1rem",
+        padding: "0.5rem",
       }}>
+
         <Container sx={{ 
           display: "flex",
           flexDirection: "column",
-          padding: "1rem",
+          padding: "0.5rem",
           alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
@@ -38,13 +40,21 @@ const Experience: React.FC = () => {
           }}>Experience</Typography>
         </Container>
 
-          <Container maxWidth="xl" sx={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "1rem",
-          }}>
-            <ProjectsList/>
+        <Container sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row"},
+        }}>
+
+          <div style={{ flex: 1, margin: "0.5rem" }}>
+            <ProjectsList />
+          </div>
+
+          <div style={{ flex: 1, margin: "0.5rem" }}>
+            <WorkHist/>
+          </div>
+
         </Container>
+
       </Container>
     </Box>
   );

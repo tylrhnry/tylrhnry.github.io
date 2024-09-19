@@ -14,7 +14,7 @@ import {
   Divider,
 } from "@mui/material";
 import Portrait from "../components/HomeComps/Portrait";
-import BriefWorkHis from "../components/HomeComps/BriefWorkHis";
+import BriefWorkHist from "../components/HomeComps/BriefWorkHist";
 import FeaturedProjects from "../components/HomeComps/FeaturedProjects";
 
 
@@ -41,21 +41,14 @@ const Home: FC<any> = (): ReactElement => {
           display: "flex",
           flexDirection: "column",
           padding: "1rem",
-          alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
+            textAlign: "center",
           }}>Home</Typography>
-          <Typography sx={{ paddingTop: {xs: "1rem", md: "2rem" } }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            interdum nunc nec ante fringilla, eu ultricies odio finibus. 
-            Sed ut ante eu lectus aliquet iaculis.
-            Ut euismod dolor eget ligula vehicula, a gravida libero gravida.
-            Donec nec justo vel elit aliquet fermentum nec ut tellus. 
-            Fusce vestibulum, justo nec auctor facilisis, libero metus 
-            ullamcorper ex.
-            <br/>
-            <br/>
+          <Typography sx={{ 
+            paddingTop: {xs: "1rem", md: "2rem" },
+          }}>
             Hello! I'm Tyler Henry, and I'm passionate about functional software.<br/>
             I love software that interacts with the real world.<br/>
             <br/>
@@ -78,8 +71,12 @@ const Home: FC<any> = (): ReactElement => {
         flexDirection: { xs: "column", md: "row"},
         padding: "1rem",
       }}>
+        <div style={{ flex: 1, margin: "0.5rem" }}>
           <FeaturedProjects />
-          <BriefWorkHis />
+        </div>
+        <div style={{ flex: 1, margin: "0.5rem" }}>
+          <BriefWorkHist />
+        </div>
       </Container>
     </Box>
   );

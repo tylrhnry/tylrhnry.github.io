@@ -16,7 +16,14 @@ function App() {
         default: '#111', // dark mode
       },
       primary: {
-        main:  '#819c71', // nav & footer
+        main:  '#819c71', // nav & footer (green)
+        // main: '#bf5524', // orange
+        // main: '#548e43', // green
+        // main: '#438e7b', // teal
+        // main: '#5e96b5', // blue
+        // main: '#705eb5', // purple
+        // main: '#a05968', // maroon
+        // main: '#a35753', // redish
         light: '#FFF',    // tab 1
         dark:  '#CCC',    // tab 2
       },
@@ -39,7 +46,7 @@ function App() {
       <Box height="100vh" display="flex" flexDirection="column">
         <Router>
           <Navbar/>
-            <div style={{paddingTop: "4rem", flex: 1, }}>
+          <div style={{ flex: 1, }}>
             <Routes>
               {appRoutes.map((route) => (
                 <Route
@@ -50,7 +57,7 @@ function App() {
               ))}
               <Route path="*" element={<Navigate to="/home" />} />
             </Routes>
-            </div>
+          </div>
           <BackToTopButton/>
           <Footer/>
         </Router>
