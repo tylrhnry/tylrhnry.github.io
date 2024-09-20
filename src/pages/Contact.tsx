@@ -19,10 +19,10 @@ const Contact: React.FC = () => {
         padding: "0.5rem",
       }}>
 
-        <Container sx={{
+        <Container sx={{ 
           display: "flex",
           flexDirection: "column",
-          margin: "0.5rem",
+          padding: "0.5rem",
           alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
           </Typography>
         </Container>
 
-        <Container>
+        <Container maxWidth="xl">
           <Typography>
             Name<br/>
             email (public one?)<br/>

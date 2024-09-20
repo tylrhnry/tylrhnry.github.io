@@ -39,7 +39,9 @@ const Education: FC<any> = (): ReactElement => {
       }}>
 
         <Container sx={{ 
-          margin: "0.5rem",
+          display: "flex",
+          flexDirection: "column",
+          padding: "0.5rem",
           alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
@@ -49,7 +51,7 @@ const Education: FC<any> = (): ReactElement => {
           </Typography>
         </Container>
 
-        <Container>
+        <Container maxWidth="xl">
           {/*Summary of school*/}
           <Typography>
             UVU logo image <br/>
@@ -61,7 +63,7 @@ const Education: FC<any> = (): ReactElement => {
           </Typography>
         </Container>
 
-        <Container disableGutters sx={{
+        <Container maxWidth="xl" disableGutters sx={{
           display: "flex",
           flexDirection: {xs: "column", md: "row"},
           alignItems: {xs: "center", md: "start"},

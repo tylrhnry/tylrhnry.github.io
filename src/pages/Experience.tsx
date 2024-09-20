@@ -42,7 +42,7 @@ const Experience: React.FC = () => {
           </Typography>
         </Container>
 
-        <Container disableGutters sx={{
+        <Container maxWidth="xl" disableGutters sx={{
           display: "flex",
           flexDirection: {xs: "column", md: "row"},
           alignItems: {xs: "center", md: "start"},
