@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
       alignItems: "center",
     }}>
       <Container maxWidth="xl" sx={{
-        padding: "0",
+        padding: "0.5rem",
       }}>
 
         <Container sx={{ 
@@ -37,21 +37,25 @@ const Experience: React.FC = () => {
         }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
-          }}>Experience</Typography>
+          }}>
+            Experience
+          </Typography>
         </Container>
 
-        <Container sx={{
+        <Container disableGutters sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row"},
+          flexDirection: {xs: "column", md: "row"},
+          alignItems: {xs: "center", md: "start"},
+          paddingBottom: "0.5rem",
         }}>
 
-          <div style={{ flex: 1, margin: "0.5rem" }}>
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
             <ProjectsList />
-          </div>
+          </Container>
 
-          <div style={{ flex: 1, margin: "0.5rem" }}>
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
             <WorkHist/>
-          </div>
+          </Container>
 
         </Container>
 

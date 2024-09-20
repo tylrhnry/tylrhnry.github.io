@@ -9,6 +9,7 @@ import {
   Typography,
   Link,
   Button,
+  Divider,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -48,8 +49,11 @@ const ProjectTemplate: FC<ProjectProps> = ({
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
+      <Divider/>
       <AccordionDetails>
-        <Typography>{description}</Typography>
+        <Typography sx={{ whiteSpace: 'pre-line' }}>
+          {description}
+        </Typography>
         <Link 
           href={githubLink}
           target = "_blank"

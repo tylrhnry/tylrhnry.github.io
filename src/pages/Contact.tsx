@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Box,
@@ -7,42 +6,47 @@ import {
 } from "@mui/material";    
 
 
-const Experience: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <Box sx={{
       flexGrow: 1,
-      // backgroundColor: "whitesmoke",
       display: "flex",
       flexDirection: "column",
       justifyContent: "top",
       alignItems: "center",
     }}>
       <Container maxWidth="xl" sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row"},
-        padding: "1rem",
+        padding: "0.5rem",
       }}>
+
         <Container sx={{
           display: "flex",
           flexDirection: "column",
-          padding: "1rem",
+          margin: "0.5rem",
           alignItems: "center",
         }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
-          }}>Contact</Typography>
+          }}>
+            Contact
+          </Typography>
         </Container>
 
-          <Container maxWidth="xl" sx={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "1rem",
-          }}>
-            <div></div>
+        <Container>
+          <Typography>
+            Name<br/>
+            email (public one?)<br/>
+            phone number?<br/>
+            linkedin?<br/>
+            signal (have a public version? Like with voip number on work user)<br/>
+            matrix<br/>
+
+            Availability?<br/>
+          </Typography>
         </Container>
       </Container>
     </Box>
   );
 };
 
-export default Experience;
+export default Contact;

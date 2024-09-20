@@ -28,56 +28,62 @@ const Home: FC<any> = (): ReactElement => {
       justifyContent: "top",
       alignItems: "center",
     }}>
-      {/* consolodate the maxWidth into 1 container */}
-      <Container maxWidth="xl" sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row"},
-        padding: "1rem",
-      }}>
-
-        <Portrait/>
 
         <Container sx={{
           display: "flex",
-          flexDirection: "column",
-          padding: "1rem",
+          flexDirection: { xs: "column", md: "row"},
+          margin: "0.5rem",
+          alignItems: "center",
         }}>
-          <Typography variant="h3" sx={{
-            display: {md: "none"},
-            textAlign: "center",
-          }}>Home</Typography>
-          <Typography sx={{ 
-            paddingTop: {xs: "1rem", md: "2rem" },
+
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
+            <Portrait/>
+          </Container>
+
+          <Container sx={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "0",
           }}>
-            Hello! I'm Tyler Henry, and I'm passionate about functional software.<br/>
-            I love software that interacts with the real world.<br/>
-            <br/>
-            Consistently trying to learn new things has introduced me to some of the best tools.<br/>
-            Rust, Nix, Neovim, SDR, textbooks<br/>
-            Hardware integration. (radios, cameras, drones, sensors)<br/>
-            I have deployed many lora nodes, including a remote, solar-powered repeater.<br/>
-            I am currently bringing a VTOL design to CAD.<br/>
-            
-          </Typography>
+            <Typography variant="h3" sx={{
+              display: {md: "none"},
+              textAlign: "center",
+            }}>Home</Typography>
+            <Typography sx={{ 
+              paddingTop: {xs: "1rem", md: "2rem" },
+            }}>
+              Hello! I'm Tyler Henry, and I'm passionate about functional software.<br/>
+              I love software that interacts with the real world.<br/>
+              <br/>
+              Consistently trying to learn new things has introduced me to some of the best tools.<br/>
+              Rust, Nix, Neovim, SDR, textbooks<br/>
+              Hardware integration. (radios, cameras, drones, sensors)<br/>
+              I have deployed many lora nodes, including a remote, solar-powered repeater.<br/>
+              I am currently bringing a VTOL design to CAD.<br/>
+            </Typography>
+          </Container>
         </Container>
-      </Container>
 
-      <Container maxWidth="xl" >
-        <Divider sx={{ backgroundColor: "gray", margin: "0 1.5rem" }} />
-      </Container>
+        <Container>
+          <Divider/>
+        </Container>
 
-      <Container maxWidth="xl" sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row"},
-        padding: "1rem",
-      }}>
-        <div style={{ flex: 1, margin: "0.5rem" }}>
-          <FeaturedProjects />
-        </div>
-        <div style={{ flex: 1, margin: "0.5rem" }}>
-          <BriefWorkHist />
-        </div>
-      </Container>
+        <Container disableGutters sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row"},
+          alignItems: {xs: "center", md: "start"},
+          paddingBottom: "0.5rem",
+        }}>
+
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
+            <FeaturedProjects/>
+          </Container>
+
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
+            <BriefWorkHist/>
+          </Container>
+
+        </Container>
     </Box>
   );
 };

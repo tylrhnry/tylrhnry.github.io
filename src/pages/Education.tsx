@@ -33,48 +33,48 @@ const Education: FC<any> = (): ReactElement => {
       justifyContent: "top",
       alignItems: "center",
     }}>
+
       <Container maxWidth="xl" sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row"},
-        padding: "1rem",
-        alignItems: "center",
+        padding: "0.5rem"
       }}>
-          <Typography variant="h3" sx={{ 
+
+        <Container sx={{ 
+          margin: "0.5rem",
+          alignItems: "center",
+        }}>
+          <Typography variant="h3" sx={{
             display: {md: "none"},
           }}>
-            Education</Typography>
+            Education
+          </Typography>
+        </Container>
 
-      </Container>
-
-      <Container>
         <Container>
           {/*Summary of school*/}
-          <Typography sx={{
-            margin: "0.5rem",
-          }}>
+          <Typography>
             UVU logo image <br/>
             Degree: Bachelor's of Science, Computer Science<br/>
             GPA: 3.95/4.0 <br/>
             Credits: 120 completed, 15 in progress <br/>
             Dates: Jan. 2021 - Dec. 2024 <br/>
-            View transcripts <br/>
-
+            View transcripts <br/><br/>
           </Typography>
         </Container>
 
-        <Container maxWidth="xl" sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row"},
-            padding: "0rem",
+        <Container disableGutters sx={{
+          display: "flex",
+          flexDirection: {xs: "column", md: "row"},
+          alignItems: {xs: "center", md: "start"},
+          paddingBottom: "0.5rem",
         }}>
 
-          <div style={{ flex: 1, margin: "0.5rem" }}>
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
             <FutureCourses/>
-          </div>
+          </Container>
 
-          <div style={{ flex: 1, margin: "0.5rem" }}>
+          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
             <PastCourses/>
-          </div>
+          </Container>
 
         </Container>
       </Container>

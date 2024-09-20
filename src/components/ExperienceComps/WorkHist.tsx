@@ -32,6 +32,8 @@ const WorkHist: React.FC = () => {
         <JobTemplate
           key={index}
           title={job.title}
+          company={job.company}
+          dates={job.dates}
           description={job.description}
           index={index}
           nestLevel={0}

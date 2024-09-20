@@ -6,6 +6,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  Divider,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { projectData } from "../Projects/ProjectData";
@@ -53,8 +54,11 @@ const CourseTemplate: FC<CourseProps> = ({
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
+      <Divider/>
       <AccordionDetails>
-        <Typography>{description}</Typography>
+        <Typography sx={{ whiteSpace: 'pre-line' }}>
+          {description}
+        </Typography>
           {projectData
             .filter((project) => project.course === courseCode)
             .map((project, index) => (
