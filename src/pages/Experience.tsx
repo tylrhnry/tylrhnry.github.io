@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
       alignItems: "center",
     }}>
       <Container maxWidth="xl" sx={{
-        padding: "0.5rem",
+        padding: "0",
       }}>
 
         <Container sx={{ 

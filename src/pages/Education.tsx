@@ -33,7 +33,6 @@ const Education: FC<any> = (): ReactElement => {
       justifyContent: "top",
       alignItems: "center",
     }}>
-      {/* consolidate the maxWidth into 1 container */}
       <Container maxWidth="xl" sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
@@ -66,15 +65,15 @@ const Education: FC<any> = (): ReactElement => {
         <Container maxWidth="xl" sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row"},
-            padding: "1rem",
+            padding: "0rem",
         }}>
 
           <div style={{ flex: 1, margin: "0.5rem" }}>
-            <PastCourses/>
+            <FutureCourses/>
           </div>
 
           <div style={{ flex: 1, margin: "0.5rem" }}>
-            <FutureCourses/>
+            <PastCourses/>
           </div>
 
         </Container>

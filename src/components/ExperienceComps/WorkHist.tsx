@@ -25,7 +25,7 @@ const WorkHist: React.FC = () => {
       alignItems: "center",
     }}>
       <Container sx={{
-          paddingTop: "1rem",
+          paddingTop: {xs: "1rem", md: "0"},
         }}>
       <Typography variant="h5" >Work History</Typography>
       {JobData.map((job, index) => (

@@ -39,18 +39,18 @@ const Navbar: FC = (): ReactElement => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link component={NavLink} to={"/home"} rel="noopener noreferrer">
-          <Typography
-            variant="h4"
-            noWrap
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              paddingLeft: "3.5rem",
-              color: "text.primary"
-            }}
-          >
-            Tyler Henry
-          </Typography>
+            <Typography
+              variant="h4"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                paddingLeft: "3.5rem",
+                color: "text.primary"
+              }}
+            >
+              Tyler Henry
+            </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none", } }}>
             <IconButton
@@ -98,18 +98,26 @@ const Navbar: FC = (): ReactElement => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h4"
-            noWrap
-            component="div"
-            sx={{ 
-              flexGrow: 1, 
-              display: { xs: "flex", md: "none" },
-              color: "text.primary",
-             }}
+          <Link
+            component={NavLink}
+            to={"/home"}
+            rel="noopener noreferrer"
+            sx={{
+                flexGrow: 1, 
+                display: { xs: "flex", md: "none" },
+                color: "text.primary",
+                textAlign: "center",
+                textDecoration: "none", // Don't underline after click
+            }}
           >
-            Tyler Henry
-          </Typography>
+            <Typography
+              variant="h4"
+              noWrap
+              component="div"
+            >
+              Tyler Henry
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex"} }}>
             <Box
               sx={{

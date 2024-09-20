@@ -11,4 +11,5 @@ Run `yarn deploy` to deploy the app to github and have the changes reflected in 
 
 
 ### Bugs
-
+updated photo
+reorder courses to be "Current" and then decending order of time
