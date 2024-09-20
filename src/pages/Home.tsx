@@ -30,11 +30,11 @@ const Home: FC<any> = (): ReactElement => {
       padding: "0.5rem",
     }}>
 
-      <Container maxWidth="xl" sx={{
+      <Container maxWidth="xl" disableGutters sx={{
         flexGrow: 1,
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
-        margin: "0.5rem",
+        // margin: "0.5rem",
         alignItems: "center",
       }}>
 
@@ -42,17 +42,17 @@ const Home: FC<any> = (): ReactElement => {
           <Portrait/>
         </Container>
 
-        <Container sx={{
+        <Container disableGutters sx={{
           display: "flex",
           flexDirection: "column",
-          padding: "0",
+          paddingLeft: {xs: "0", md: "0.5rem"},
         }}>
           <Typography variant="h3" sx={{
             display: {md: "none"},
             textAlign: "center",
           }}>Home</Typography>
           <Typography sx={{ 
-            paddingTop: {xs: "1rem", md: "2rem" },
+            paddingTop: {xs: "1rem", md: "2rem"},
           }}>
             Hello! I'm Tyler Henry, and I'm passionate about functional software.<br/>
             I love software that interacts with the real world.<br/>
@@ -66,8 +66,8 @@ const Home: FC<any> = (): ReactElement => {
         </Container>
       </Container>
 
-      <Container>
-        <Divider/>
+      <Container maxWidth="xl" >
+        <Divider sx={{ backgroundColor: "gray" }} />
       </Container>
 
       <Container maxWidth="xl" disableGutters sx={{
