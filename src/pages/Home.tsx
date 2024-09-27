@@ -2,10 +2,6 @@
 // Introduction, cv
 // Overview/highlights/links
 
-// Add actual values for intro, photo, projects, work
-
-// Get rid of "Home" at the top and color tab?
-
 import React, {ReactElement, FC} from "react";
 import {
   Box, 
@@ -34,8 +30,6 @@ const Home: FC<any> = (): ReactElement => {
         flexGrow: 1,
         display: "flex",
         flexDirection: { xs: "column", md: "row"},
-        // margin: "0.5rem",
-        // alignItems: "center",
         alignItems: "start",
       }}>
 

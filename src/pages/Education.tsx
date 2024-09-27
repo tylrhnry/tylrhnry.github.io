@@ -22,6 +22,7 @@ import {
 } from "@mui/material";
 import PastCourses from "../components/EducationComps/PastCourses";
 import FutureCourses from "../components/EducationComps/FutureCourses";
+import UVULogo from "../components/EducationComps/UVULogo";
 
 
 const Education: FC<any> = (): ReactElement => {
@@ -51,10 +52,16 @@ const Education: FC<any> = (): ReactElement => {
           </Typography>
         </Container>
 
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{
+          display: "flex",
+          flexDirection: {xs: "column", md: "row"},
+          alignItems: "start",
+        }}>
           {/*Summary of school*/}
+          <UVULogo/>
           <Typography>
             UVU logo image <br/>
+
             Degree: Bachelor's of Science, Computer Science<br/>
             GPA: 3.95/4.0 <br/>
             Credits: 120 completed, 15 in progress <br/>
