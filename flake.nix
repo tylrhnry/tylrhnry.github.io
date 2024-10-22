@@ -23,6 +23,8 @@
                 ];
 
                 shellHook = ''
+                    export SHELL=$(which zsh)
+                    exec zsh
                     echo "Welcome to your node app"
                 '';
             };

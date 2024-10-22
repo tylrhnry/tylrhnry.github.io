@@ -34,13 +34,13 @@ export const routes: Array<Route> = [
         enabled: true,
         component: Education
     },
-    {
-        key: "contact-route",
-        title: "Contact",
-        path: "/contact",
-        enabled: true,
-        component: Contact
-    },
+    // {
+    //     key: "contact-route",
+    //     title: "Contact",
+    //     path: "/contact",
+    //     enabled: true,
+    //     component: Contact
+    // },
 ]
 
 

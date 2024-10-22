@@ -3,18 +3,18 @@ import imgSrcSqr from "../../images/UVUSquareGreen.png";
 import imgSrcHor from "../../images/UVUHorizontalGreen.png";
 
 const UVULogo: FC<any> = (): ReactElement => {
-  const horImgWidth = "25rem";
-  const sqrImgWidth = "25rem";
+  const horImgWidth = "35rem";
+  const sqrImgWidth = "12rem";
   const [imageSrc, setImageSrc] = useState<string>(imgSrcHor);
   const [imageWidth, setImageWidth] = useState<string>(horImgWidth);
 
   const updateImageSource = () => {
     if (window.matchMedia("(max-width: 899px)").matches) {
-      setImageSrc(imgSrcHor); // Use horizontal image for smaller screens
-      setImageWidth(horImgWidth);
-    } else {
       setImageSrc(imgSrcSqr); // Use square image for larger screens
       setImageWidth(sqrImgWidth);
+    } else {
+      setImageSrc(imgSrcHor); // Use horizontal image for smaller screens
+      setImageWidth(horImgWidth);
     }
   };
 
@@ -30,14 +30,14 @@ const UVULogo: FC<any> = (): ReactElement => {
   return (
     <div style={{
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "flex-start",
       alignItems: "center",
       padding: "0",
+      // flexGrow: 1,
     }}>
       <img src={imageSrc} alt="UVU Logo" className="image" 
-        style={{ 
+        style={{           
           minWidth: imageWidth, 
-          // borderRadius: "3rem",
         }}/>
     </div>
   );
