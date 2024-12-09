@@ -24,14 +24,14 @@
 export const projectData = [
   {
     title: "GPS Spoofing Detection",
-    description: "I wrote a Rust program that when coupled with commone drone hardware (GPS and IMU) can work to detect artificial GPS signals meant to attack the drone. The program performs an integration on the accelerometer and gyroscope readings to estimate it's relative position since the last verified location. If the new location is within the margin of error of the received GPS readings, we assume the drone is still receiving accurate GPS data. If the drone starts receiving GPS data that suggests it has been moving contrary to what the IMU has measured, we assume the GPS data is inaccurate. When validation is frequently performed, the sensor error can be continuously removed, leading to more accurate detection of adversarial signals.",
+    description: "I wrote a Rust program that when coupled with common drone hardware (GPS and IMU) can work to detect artificial GPS signals meant to attack the drone. The program performs an integration on the accelerometer and gyroscope readings to estimate its relative position since the last verified location. If the new location is within the margin of error of the received GPS readings, we assume the drone is still receiving accurate GPS data. If the drone starts receiving GPS data that suggests it has been moving contrary to what the IMU has measured, we assume the GPS data is inaccurate. When validation is frequently performed, the sensor error can be continuously removed, leading to more accurate detection of adversarial signals.",
     githubLink: "https://github.com/tylrhnry/gps_spoofing_detection",
     course: "339R (Advanced Programming Language (Rust))",
     featured: true,
   },
   {
     title: "Missile Defense System",
-    description: "Created from scratch to teach the Rust programming language to dozens of and interns and professional C++ developers at the Airforce. This program simulates and visualizes enemy and interceptor missiles. The enemy missile can be given a non-linear path to complicate targeting from the interceptor. Currently, the path prediction is rudimentary, and I would like to add spline regression and a binary search on the predicted path to allow for quicker interception and realistic range limits.",
+    description: "Created from scratch to teach the Rust programming language to dozens of interns and professional C++ developers at the Airforce. This program simulates and visualizes enemy and interceptor missiles. The enemy missile can be given a non-linear path to complicate targeting from the interceptor. Currently, the path prediction is rudimentary, and I would like to add spline regression and a binary search on the predicted path to allow for quicker interception and realistic range limits.",
     githubLink: "https://github.com/tylrhnry/missile_defense_sim",
     course: "Personal",
     featured: true,
