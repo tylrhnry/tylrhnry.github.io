@@ -1,9 +1,19 @@
 
 export const JobData = [
   {
+    title: "F-16 Radar Software Engineer",
+    company: "Air Force",
+    dates: "Dec. 2024 - Present",
+    description: `* Developing a program to remove the team's dependency on Windows and Solaris (go Linux) for development and convert from CVS (concurrent versions system) to Git. 
+
+    * Working on a large-scale, real-time, safety-critical system to support ongoing updates and additions.
+    `,
+    featured: true,
+  },
+  {
     title: "Radar Researcher",
     company: "Air Force",
-    dates: "Apr. 2024 - Present",
+    dates: "Apr. 2024 - Dec. 2024",
     description: `* Led the development of a drone-mounted Ground Penetrating Radar (GPR) system, integrating a Software Defined Radio (SDR) and custom signal processing algorithms, which achieved an 80x reduction in system cost compared to existing methods.
 
       * Served as the primary software developer for a GPR system project, contributing to a Master’s Degree research project focused on innovative explosive device detection.
@@ -36,7 +46,7 @@ export const JobData = [
     title: "Engineering Intern",
     company: "Blendtec Inc.",
     dates: "Jan. 2021 - Apr. 2023",
-    description: `* Designed and tested new assembly aids and tools using Solidworks and microcontrollers to update and revise assembly processes.
+    description: `* Designed and tested new assembly aids and tools using SolidWorks and microcontroller ch to update and revise assembly processes.
 
       * Planned, formulated, and oversaw the fabrication of updated assembly lines, doubling the output potential of production teams.
     `,

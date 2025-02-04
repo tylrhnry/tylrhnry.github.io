@@ -96,7 +96,7 @@ const ProjectTemplate: FC<ProjectProps> = ({
                         display: "flex",
                         alignItems: "center",
                       }}>
-                View on GitHub</Button>
+                View on GitHub/GitLab</Button>
             </Link>
           )}
         </Box>

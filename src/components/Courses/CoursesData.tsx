@@ -1,6 +1,31 @@
 
 export const CourseData = [
   {
+    title: "Compiler Construction",
+    courseCode: "4490",
+    description: "Builds on software created in CS 4380. Presents concepts necessary to create a modern compiler. Reinforces theoretical and practical software development skills from previous courses through an immersive, expressive approach to compiler construction.",
+  },
+  {
+    title: "Deep Learning in Action",
+    courseCode: "439R",
+    description: "Teaches modern deep learning theory. Requires solving a real-world problem using applied teachings. Students develop and extend local, customized LLM's from open-source ML tools.",
+  },
+  {
+    title: "Machine Learning",
+    courseCode: "4700",
+    description: "Explores the philosophy, utility, mathematics and algorithms of machine learning in order to understand the basic concepts and issues at the heart of machine learning. Covers the implementation and use of machine learning algorithms to solve real-world problems or to pursue a graduate program. Includes feature selection and extraction, decision trees, neural networks, nearest-neighbors, support vector machines, naive Bayes classifier, clustering, ensembles, reinforcement learning and deep learning.",
+  },
+  {
+    title: "Security and Vulnerability Analysis",
+    courseCode: "4120",
+    description: "Presents a methodology for attacking, assessing, analyzing, categorizing, and remediating security weaknesses in software and software systems. Develops insight into system architecture, process execution, operating systems, and error conditions that create opportunities for attack surfaces. Develops the ability to scan and exploit popular third-party applications rather than simulated lab exercises. Emphasizes writing and running working exploits and payloads.",
+  },
+  {
+    title: "SolidWorks Modeling",
+    courseCode: "EDGT 1071",
+    description: "Teaches basic 3D computer modeling, which emphasizes the development of 3D machine parts, assemblies, and drawings in a constraint-based modeling environment using SolidWorks. Emphasizes the feature based design process, which simulates actual manufacturing processes with 2D sketching tools and with 3D modeling tools including extrusions, revolutions, sweeps, lofts, coils, shells, placed features, patterns, and many others. Also teaches creation of basic multi-part assemblies, constraint-driven assembly animation, and generation of detailed production drawings.",
+  },
+  {
     title: "Analysis of Programming Languages",
     courseCode: "4450",
     description: "Offers the mature student an in-depth understanding of the design and implementation of programming languages. Explores criteria for evaluating programming languages as a context for comparing both traditional and current popular languages. Includes the evolution of programming languages, the concept of binding, type checking, static and dynamic scoping, control structures, subprograms and parameter passing methods, and concurrency. Explores the functional programming paradigm in-depth. Includes programming assignments in at least two different programming languages, at least one of which being a functional language such as LISP, Scheme, ML, or Haskell.",
@@ -124,31 +149,11 @@ export const CourseData = [
 ];
 
 export const FutureCourseData = [
-  {
-    title: "Compiler Construction",
-    courseCode: "4490",
-    description: "Builds on software created in CS 4380. Presents concepts necessary to create a modern compiler. Reinforces theoretical and practical software development skills from previous courses through an immersive, expressive approach to compiler construction.",
-  },
-  {
-    title: "Deep Learning in Action",
-    courseCode: "439R",
-    description: "Teaches modern deep learning theory. Requires solving a real-world problem using applied teachings. Students develop and extend local, customized LLM's from open-source ML tools.",
-  },
-  {
-    title: "Machine Learning",
-    courseCode: "4700",
-    description: "Explores the philosophy, utility, mathematics and algorithms of machine learning in order to understand the basic concepts and issues at the heart of machine learning. Covers the implementation and use of machine learning algorithms to solve real-world problems or to pursue a graduate program. Includes feature selection and extraction, decision trees, neural networks, nearest-neighbors, support vector machines, naive Bayes classifier, clustering, ensembles, reinforcement learning and deep learning.",
-  },
-  {
-    title: "Security and Vulnerability Analysis",
-    courseCode: "4120",
-    description: "Presents a methodology for attacking, assessing, analyzing, categorizing, and remediating security weaknesses in software and software systems. Develops insight into system architecture, process execution, operating systems, and error conditions that create opportunities for attack surfaces. Develops the ability to scan and exploit popular third-party applications rather than simulated lab exercises. Emphasizes writing and running working exploits and payloads.",
-  },
-  {
-    title: "Solidworks Modeling",
-    courseCode: "EDGT 1071",
-    description: "Teaches basic 3D computer modeling, which emphasizes the development of 3D machine parts, assemblies, and drawings in a constraint-based modeling environment using Solidworks. Emphasizes the feature based design process, which simulates actual manufacturing processes with 2D sketching tools and with 3D modeling tools including extrusions, revolutions, sweeps, lofts, coils, shells, placed features, patterns, and many others. Also teaches creation of basic multi-part assemblies, constraint-driven assembly animation, and generation of detailed production drawings.",
-  },
   // Add more courses as needed (Master's?)
+  {
+    title: "Master's courses",
+    courseCode: "",
+    description: "To be determined",
+  },
 ];
   

@@ -80,8 +80,9 @@ const Education: FC<any> = (): ReactElement => {
               Bachelor's of Science, Computer Science
             </Typography>
             <Typography sx={{ fontSize: "15px" }}>
-              GPA: 3.95/4.0 <br/>
-              Credits: 131 completed, 15 in progress <br/>
+              Magna Cum Laude<br/>
+              GPA: 3.88/4.0 <br/>
+              Credits: 146<br/>
               Dates: Jan. 2021 - Dec. 2024
             </Typography>
           </Typography>

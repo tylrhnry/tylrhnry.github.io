@@ -57,7 +57,7 @@ const Home: FC<any> = (): ReactElement => {
           <Typography sx={{ 
             textIndent: "1.5rem",
           }}>
-            I'm currently in my last semester of my Bachelor's degree in Computer Science and am in the depths of writing a compiler in Rust and developing computer vision software to allow drones to have accurate position data based off of satellite imagery. For my job as a Computer Science Intern at the Airforce, I am the primary developer for a Ground Penetrating Radar research project aimed at determining the efficacy of using software-defined radio as radar for bomb detection. In my personal time, I'm bringing a VTOL drone design from paper to CAD and setting up a number of mesh-networking LoRa radios and repeaters for emergency communication between my family, friends, and neighborhood.<br/>
+            I recently graduated with a Bachelor's degree in Computer Science and am working for the Air Force as an F-16 Radar Software Engineer in supporting the APG-68 Radar. I intend on pursuing a Master's Degree in computing to deepen my understanding of digital signal processing, advanced algorithms, and embedded software. In my personal time, I'm bringing a personal VTOL drone design from paper to CAD and setting up a number of mesh-networking LoRa radios and repeaters for emergency communication between my family, friends, and neighborhood.<br/>
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
