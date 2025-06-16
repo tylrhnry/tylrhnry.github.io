@@ -21,7 +21,7 @@ import {
     Typography,
 } from "@mui/material";
 import PastCourses from "../components/EducationComps/PastCourses";
-import FutureCourses from "../components/EducationComps/FutureCourses";
+// import FutureCourses from "../components/EducationComps/FutureCourses";
 import UVULogo from "../components/EducationComps/UVULogo";
 
 
@@ -99,9 +99,6 @@ const Education: FC<any> = (): ReactElement => {
             <PastCourses/>
           </Container>
 
-          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
-            <FutureCourses/>
-          </Container>
 
         </Container>
       </Container>

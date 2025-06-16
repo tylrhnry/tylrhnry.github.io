@@ -39,7 +39,11 @@ const Contact: React.FC = () => {
             phone number?<br/>
             linkedin?<br/>
             signal (have a public version? Like with voip number on work user)<br/>
-            matrix<br/>
+            xmpp<br/>
+            youtube<br/>
+            github<br/>
+            gitlab<br/>
+            <br/>
 
             Availability?<br/>
           </Typography>

@@ -52,18 +52,19 @@ const Home: FC<any> = (): ReactElement => {
             paddingTop: {xs: "1rem", md: "0rem"},
             textIndent: "1.5rem",
           }}>
-            Hello! I’m Tyler Henry, a passionate software developer dedicated to creating functional and performant software that bridges the digital and physical worlds. My commitment to constantly stretch myself to learn new things has led me to explore an array of powerful tools and technologies, including Rust, Nix, and software-defined radio.<br/>
+            Hello! I’m Tyler Henry, a computer scientist passionate about signal processing. I've been working for the United States Air Force on the F-16's APG-68 Radar since graduating with a Bachelor's in Computer Science from UVU. I love employing systems and tools that offer strong behavioral guarantees through well-defined semantics, type systems, and build environments.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
           }}>
-            I recently graduated with a Bachelor's degree in Computer Science and am working for the Air Force as an F-16 Radar Software Engineer in supporting the APG-68 Radar. I intend on pursuing a Master's Degree in computing to deepen my understanding of digital signal processing, advanced algorithms, and embedded software. In my personal time, I'm bringing a personal VTOL drone design from paper to CAD and setting up a number of mesh-networking LoRa radios and repeaters for emergency communication between my family, friends, and neighborhood.<br/>
+            In my personal time, I recently set up a fully-declarative and reproducible personal server using the Nix functional language and package manager. The software is built with impermanence to enforce a stateless system, while ZFS RAID, snapshots, ECC memory, and nix generations lead to an extremely reliable and accurate system.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
             paddingBottom: {sx: "1rem", md: "0.5rem"},
           }}>
-            I’m very optimistic and enthusiastic about the impactful possibilities of well-designed software, and I intend to be at the forefront of implementing solutions that make it easier for less tech-savvy individuals to take advantage of these innovations.
+            I've been helping with the software development and design advising for Hive Dynamics, a recent start-up designing low-cost cruise missiles meant for mass production.
+            I also have quite a few radio projects, including writing signal processing software for an SDR, studying for my Ham extra class licence, and building an HF Ham radio to allow me to communicate to a home radio server and send texts to family and friends via an XMPP to SMS service from nearly anywhere in the world. 
           </Typography>
         </Container>
       </Container>
