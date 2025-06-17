@@ -45,8 +45,9 @@ const Navbar: FC = (): ReactElement => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                paddingLeft: "3.5rem",
-                color: "text.primary"
+                paddingLeft: "2.5rem",
+                color: "text.primary",
+                fontFamily: "'Georgia', serif",
               }}
             >
               Tyler Henry
@@ -125,7 +126,7 @@ const Navbar: FC = (): ReactElement => {
                 flexDirection: "row",
                 justifyContent: "flex-start",
                 alignItems: "center",
-                marginLeft: "1rem",
+                marginLeft: "2.5rem",
               }}
             >
               {routes.map((page) => (

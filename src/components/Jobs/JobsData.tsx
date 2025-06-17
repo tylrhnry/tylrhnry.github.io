@@ -46,7 +46,7 @@ export const JobData = [
     title: "Engineering Intern",
     company: "Blendtec Inc.",
     dates: "Jan. 2021 - Apr. 2023",
-    description: `* Designed and tested new assembly aids and tools using SolidWorks and microcontroller ch to update and revise assembly processes.
+    description: `* Designed and tested new assembly aids and tools using SolidWorks and microcontrollers to update and revise assembly processes.
 
       * Planned, formulated, and oversaw the fabrication of updated assembly lines, doubling the output potential of production teams.
     `,

@@ -1,6 +1,6 @@
 
 import React, { FC, ReactElement } from "react";
-import imgSrc from "../../images/portrait.jpg";
+import imgSrc from "../../images/portrait-mtn.jpg";
 
 const Portrait: FC<any> = (): ReactElement => {
   return (

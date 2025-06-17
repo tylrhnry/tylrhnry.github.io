@@ -15,8 +15,8 @@
         in {
             devShell = pkgs.mkShell {
                 buildInputs = with pkgs; [
-                    create-react-app
-                    nodejs_23
+                    # create-react-app
+                    nodejs_24
                     yarn
                     yarn2nix
                     typescript
