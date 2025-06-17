@@ -7602,6 +7602,14 @@
       };
     }
     {
+      name = "path_to_regexp___path_to_regexp_8.2.0.tgz";
+      path = fetchurl {
+        name = "path_to_regexp___path_to_regexp_8.2.0.tgz";
+        url  = "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-8.2.0.tgz";
+        sha512 = "TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==";
+      };
+    }
+    {
       name = "path_type___path_type_4.0.0.tgz";
       path = fetchurl {
         name = "path_type___path_type_4.0.0.tgz";
