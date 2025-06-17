@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.4913f58a.js",
-    "static/media/portrait.jpg": "/static/media/portrait.ffb9b71540bdcdd8a229.jpg",
+    "main.js": "/static/js/main.8cd72aeb.js",
+    "static/media/portrait-mtn.jpg": "/static/media/portrait-mtn.ac7b4b0e6f9b3d22cf7c.jpg",
     "index.html": "/index.html",
-    "main.4913f58a.js.map": "/static/js/main.4913f58a.js.map"
+    "main.8cd72aeb.js.map": "/static/js/main.8cd72aeb.js.map"
   },
   "entrypoints": [
-    "static/js/main.4913f58a.js"
+    "static/js/main.8cd72aeb.js"
   ]
 }
