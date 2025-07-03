@@ -4274,10 +4274,10 @@
       };
     }
     {
-      name = "https___registry.npmjs.org_gh_pages___gh_pages_6.3.0.tgz";
+      name = "gh_pages___gh_pages_6.3.0.tgz";
       path = fetchurl {
-        name = "https___registry.npmjs.org_gh_pages___gh_pages_6.3.0.tgz";
-        url  = "https://registry.npmjs.org/gh-pages/-/gh-pages-6.3.0.tgz";
+        name = "gh_pages___gh_pages_6.3.0.tgz";
+        url  = "https://registry.yarnpkg.com/gh-pages/-/gh-pages-6.3.0.tgz";
         sha512 = "Ot5lU6jK0Eb+sszG8pciXdjMXdBJ5wODvgjR+imihTqsUWF2K6dJ9HST55lgqcs8wWcw6o6wAsUzfcYRhJPXbA==";
       };
     }
