@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTopButton from './components/BackToTopButton';
 import FaviconHandler from './components/FaviconHandler';
+import * as React from 'react';
 
 const theme = createTheme({
   palette: {

@@ -18,6 +18,7 @@ export default function FaviconHandler() {
     };
 
     updateFavicon();
+
     themeMediaQuery.addEventListener('change', updateFavicon);
 
     return () => {
@@ -25,5 +26,5 @@ export default function FaviconHandler() {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return null;
 }
