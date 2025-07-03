@@ -88,7 +88,7 @@ const Navbar: FC = (): ReactElement => {
               }}
             >
               {routes.map((page) => (
-                <Link
+                <MenuItem
                   key={page.key}
                   component={NextLink}
                   href={page.path}
@@ -96,14 +96,15 @@ const Navbar: FC = (): ReactElement => {
                     setOpenPage(page.title);
                     handleCloseNavMenu();
                   }}
-                  color={page.title === openPage ? 'gray' : 'black'}
-                  underline="none"
-                  variant="button"
+                  sx={{
+                    color: page.title === openPage ? 'gray' : 'black',
+                    textDecoration: 'none',
+                  }}
                 >
-                  <MenuItem>
-                    <Typography textAlign="center">{page.title}</Typography>
-                  </MenuItem>
-                </Link>
+                  <Typography textAlign="center" variant="button">
+                    {page.title}
+                  </Typography>
+                </MenuItem>
               ))}
             </Menu>
           </Box>
