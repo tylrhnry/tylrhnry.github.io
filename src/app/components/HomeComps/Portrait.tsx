@@ -21,7 +21,7 @@ const Portrait: FC = (): ReactElement => {
         height={240} // Adjust based on image aspect ratio
         style={{
           maxWidth: "15rem",
-          borderRadius: "3rem",
+          borderRadius: "1rem",
           objectFit: "contain",
         }}
       />
