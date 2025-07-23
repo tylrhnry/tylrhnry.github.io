@@ -9,10 +9,10 @@ import {
   Container,
   Divider,
 } from "@mui/material";
-import Portrait from "../components/HomeComps/Portrait";
-import BriefWorkHist from "../components/HomeComps/BriefWorkHist";
-import FeaturedProjects from "../components/HomeComps/FeaturedProjects";
-
+import Portrait from "./Portrait";
+import BriefWorkHist from "./BriefWorkHist";
+import FeaturedProjects from "./FeaturedProjects";
+import ImageGallery from "./ImgStack";
 
 
 const Home: FC = (): ReactElement => {
@@ -89,6 +89,9 @@ const Home: FC = (): ReactElement => {
         </Container>
 
       </Container>
+
+      <ImageGallery />
+
     </Box>
   );
 };

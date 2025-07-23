@@ -34,19 +34,37 @@ const Contact: React.FC = () => {
 
         <Container maxWidth="xl">
           <Typography>
-            Name<br/>
-            email (public one?)<br/>
-            phone number?<br/>
-            linkedin?<br/>
-            signal (have a public version? Like with voip number on work user)<br/>
-            xmpp<br/>
-            youtube<br/>
-            github<br/>
-            gitlab<br/>
+            Email: &emsp; resume.25@tylrhnry.com<br/>
+            My email is hosted securely on Tuta. If you're also using Tuta, messages you send me are automatically end-to-end encrypted.<br/>
+            Phone: &emsp;(385) three sixteen - eight eight eight won <br/>
+            XMPP: &emsp;th.pers.prof@chatterboxtown.us<br/>
+            SimpleX: <a target="_blank" href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion" >Add me</a><br/>
             <br/>
-
-            Availability?<br/>
           </Typography>
+        </Container>
+
+        <Container maxWidth="xl" sx={{
+          // display: "flex",
+          // flexDirection: "column",
+          // alignItems: "center",
+        }}>
+          <Box
+            sx={{
+              width: "70%",
+              height: "1300px", // Adjust as needed
+              border: "1px solid #ccc",
+              borderRadius: 2,
+              boxShadow: 2,
+            }}
+          >
+            <iframe
+              src="/files/resume_25.pdf" // Place your PDF in `public/files/`
+              width="100%"
+              height="100%"
+              style={{ border: "none" }}
+              title="Embedded PDF"
+            />
+          </Box>
         </Container>
       </Container>
     </Box>

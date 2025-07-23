@@ -4,9 +4,9 @@ export const JobData = [
     title: "F-16 Radar Software Engineer",
     company: "Air Force",
     dates: "Dec. 2024 - Present",
-    description: `* Developing a program to remove the team's dependency on Windows and Solaris (go Linux) for development and convert from CVS (concurrent versions system) to Git. 
+    description: `* Working on a large-scale, real-time, safety-critical system to support ongoing updates, additions, and fixes.
 
-    * Working on a large-scale, real-time, safety-critical system to support ongoing updates and additions.
+      * Developed a program to remove the team's dependency on multiple operating systems, custom tools, and an out-of-date version control system to well-supported, flexible software. 
     `,
     featured: true,
   },
@@ -33,16 +33,6 @@ export const JobData = [
     featured: true,
   },
   {
-    title: "Student Engineer",
-    company: "Bull Frog Spas",
-    dates: "Jun. 2021 - Aug. 2021",
-    description: `* Led the design and initial implementation of a software interface that dynamically displayed assembly processes for 17 products with hundreds of configurations.
-
-      * Designed the structure of a digital tracking system for dozens of products, collaborating with software developers and production teams to accurately define and meet system requirements.
-    `,
-    featured: true,
-  },
-  {
     title: "Engineering Intern",
     company: "Blendtec Inc.",
     dates: "Jan. 2021 - Apr. 2023",
@@ -52,7 +42,16 @@ export const JobData = [
     `,
     featured: true,
   },
-  // Add more projects as needed
+  {
+    title: "Student Engineer",
+    company: "Bull Frog Spas",
+    dates: "Jun. 2021 - Aug. 2021",
+    description: `* Led the design and initial implementation of a software interface that dynamically displayed assembly processes for 17 products with hundreds of configurations.
+
+      * Designed the structure of a digital tracking system for dozens of products, collaborating with software developers and production teams to accurately define and meet system requirements.
+    `,
+    featured: true,
+  },
 ];
   
 // projects to be displayed on home page

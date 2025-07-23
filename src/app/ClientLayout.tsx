@@ -15,12 +15,20 @@ const theme = createTheme({
     },
     primary: {
       main: '#819c71', // Nav & footer (green)
+      // main: '#5b68a0', // Nav & footer (green)
+      // main: '#535a77', // Nav & footer (green)
+      // main: '#5b464f', // Nav & footer (green)
+      // main: '#5e4c5c', // Nav & footer (green)
+      // main: '#664e64', // Nav & footer (green)
+      // main: '#756182', // Nav & footer (green)
+      // main: '#4d5d70', // Nav & footer (green)
+      // main: '#4d6470', // Nav & footer (green)
+      // main: '#a05968', // maroon
       // main: '#bf5524', // orange
       // main: '#548e43', // green
       // main: '#438e7b', // teal
       // main: '#5e96b5', // blue
       // main: '#705eb5', // purple
-      // main: '#a05968', // maroon
       // main: '#a35753', // redish
       light: '#FFF', // Tab 1
       dark: '#CCC', // Tab 2

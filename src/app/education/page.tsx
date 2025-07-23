@@ -1,28 +1,13 @@
-// Past, present, future courses
-// GPA, Transcripts, Credits
-// Scholarships, awards, clubs
- 
-// point out that projects alone are on 'experience'
-// nested list colors
-// stop nested list open status from persisting
-// add semester labels near courses
-
-// Programming projects
-    // Tutorial/explanation/requirements
-    // Interactive code
-    // Program simulator
-    // Link to github/gitlab
-
-
 import React, {ReactElement, FC} from "react";
 import { 
     Box,
     Container,
     Typography,
 } from "@mui/material";
-import PastCourses from "../components/EducationComps/PastCourses";
-// import FutureCourses from "../components/EducationComps/FutureCourses";
-import UVULogo from "../components/EducationComps/UVULogo";
+import PastCourses from "./PastCourses";
+import UVULogo from "./UVULogo";
+import ProjectGridTop from "./ProjectGridTop";
+import ProjectGridBottom from "./ProjectGridBottom";
 
 
 const Education: FC = (): ReactElement => {
@@ -35,8 +20,7 @@ const Education: FC = (): ReactElement => {
       alignItems: "center",
     }}>
 
-      <Container maxWidth="xl" sx={{
-        padding: "0.5rem"
+      <Container maxWidth="xl" disableGutters sx={{
       }}>
 
         <Container sx={{ 
@@ -80,26 +64,43 @@ const Education: FC = (): ReactElement => {
               Bachelor&apos;s of Science, Computer Science
             </Typography>
             <Typography sx={{ fontSize: "15px" }}>
+              Computer Science Emphasis<br/>
               Magna Cum Laude<br/>
-              GPA: 3.88/4.0 <br/>
+              GPA: 3.88 <br/>
               Credits: 146<br/>
-              Dates: Jan. 2021 - Dec. 2024
+            </Typography>
+          </Box>
+          <Box 
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              paddingLeft: { xs: "0", md: "3rem" },
+              paddingTop: "2.5rem",
+              marginBottom: "1rem", // Adds space below the degree name
+              minWidth: "20rem",
+            }}
+          >
+            <Typography sx={{ fontSize: "15px" }}>
+              Jan. 2021 - Dec. 2024
+              <br/>
+              <br/>
+              <br/>
+              Focused on low-level programming, electronics integration,<br/>
+              machine learning, and computing theory<br/>
             </Typography>
           </Box>
         </Container>
 
         <Container maxWidth="xl" disableGutters sx={{
           display: "flex",
-          flexDirection: {xs: "column", md: "row"},
+          flexDirection: "column",
           alignItems: {xs: "center", md: "start"},
-          paddingBottom: "0.5rem",
+          margin: 0,
+          paddingBottom: "2rem",
         }}>
-
-          <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, }}>
-            <PastCourses/>
-          </Container>
-
-
+          <ProjectGridTop/>
+          <PastCourses/>
+          <ProjectGridBottom/>
         </Container>
       </Container>
 

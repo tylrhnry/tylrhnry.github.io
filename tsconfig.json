@@ -37,10 +37,10 @@
   "include": [
     ".next/types/**/*.ts",
     "src/**/*",
-    "build/types/**/*.ts"
+    "out/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "build"
+    "out"
   ]
 }
