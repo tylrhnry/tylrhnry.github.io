@@ -14,6 +14,6 @@ Run `yarn deploy` to deploy the app to github and have the changes reflected in 
 
 
 ### Additions/Bugs/Fixes
-Add contact page (prevent web scraping of my contact info)
+Check mobile use
 
-Add more pictures/runtimes of school/personal projects
+Add github links to vtol and home server

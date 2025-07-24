@@ -19,9 +19,8 @@ type ProjectImage = {
 };
 
 const projectImages: ProjectImage[] = [
-  // TODO
-  { id: 26, src: '/images/26.jpg', alt: 'Project 26', description: 'Description for project 18.' },
-  { id: 25, src: '/images/25.jpg', alt: 'Project 25', description: 'Description for project 13.' },
+  { id: 26, src: '/images/26.jpg', alt: 'Machine Learning Classifiers', description: 'This program compares several supervised machine learning classifiers on a common dataset. It splits the data into training and testing sets, trains each classifier, tests them, and displays the accuracy with a visual representation of the decision boundaries.' },
+  { id: 25, src: '/images/25.jpg', alt: 'Line Equation Calculation', description: 'For my final project in a computer architecture class, I decided to write my assembly program as one that would calculate the y=mx+b formula of a line based on two sets of x and y coordinates that lie on the line. I had to write all of the math functions, including division, manually with 2\'s complement \'and\', \'or\', and \'not\' combinations. The program is limited to lines with slopes that are multiples of 0.5 and single digit inputs for x and y, but even with some of the limitations, this simple program required more than 700 lines of assembly code for the prompts, calculation, and output.' },
 ];
 
 export default function ProjectGrid() {

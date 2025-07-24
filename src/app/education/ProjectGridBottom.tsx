@@ -19,9 +19,8 @@ type ProjectImage = {
 };
 
 const projectImages: ProjectImage[] = [
-  // TODO
-  { id: 19, src: '/images/19.jpg', alt: 'Project 19', description: 'Description for project 12.' },
-  { id: 22,  src: '/images/22.jpg',  alt: 'Project 22',  description: 'Description for project 9.' },
+  { id: 19, src: '/images/19.jpg', alt: 'Mandelbrot Fractal', description: 'This program started as a simple image generator that used a common command-line parsing library to customize the quality and location shown of this popular fractal. This project was later incorporated into web servers we wrote in Rust, where the server would provide the fractal image with the custom quality, zoom, and location based on arguments passed in the URL.' },
+  { id: 22,  src: '/images/22.jpg',  alt: 'Missile Defense Simulator',  description: 'This was some trigonometry that was being performed to figure out how to give a simulated "enemy missile" a non-linear path. The missile simulation was created as a project to teach coworkers the basics of the Rust programming language. In this step of augmenting the program, we converted the flight path of our enemy missile from a linear one to one that followed a sinusoidal path. This would later be used to complicate our interceptor missile\'s task of efficiently destroying the enemy missile. The training was ultimately too short to implement these more complicated tasks, though for other projects, path prediction is still something I\'m interested in, so I may come back to add that feature.' },
 ];
 
 export default function ProjectGrid() {
