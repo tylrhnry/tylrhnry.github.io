@@ -59,26 +59,28 @@ const ProjectTemplate: FC<ProjectProps> = ({
           display: "flex",
           justifyContent: "center",
         }}>
-          {githubLink === "N/A" ? (
-            <Typography 
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                marginTop: "0.6rem",
-                padding: "0 0.5rem 0.3rem 0.5rem",
-                borderRadius: "0.2rem",
-                border: "1px solid black",
-                width: "fit-content",
-              }}
-            >
-              Due to plagiarism concerns, I cannot publicly link this project.
-            </Typography>
+          {(githubLink === "N/A" || githubLink === "") ? (
+            githubLink === "N/A" && (
+              <Typography 
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  marginTop: "0.6rem",
+                  padding: "0 0.5rem 0.3rem 0.5rem",
+                  borderRadius: "0.2rem",
+                  border: "1px solid black",
+                  width: "fit-content",
+                }}
+              >
+                Due to plagiarism concerns, I cannot publicly link this project.
+              </Typography>
+            )
           ) : (
             <Link 
               href={githubLink}
-              target = "_blank"
+              target="_blank"
               rel="noopener noreferrer"
               sx={{
                 display: "flex",
@@ -86,17 +88,21 @@ const ProjectTemplate: FC<ProjectProps> = ({
                 alignItems: "center",
                 paddingTop: "1rem",
                 textDecoration: "none",
-              }}>          
-              <Button variant="contained" 
-                      sx={{
-                        backgroundColor: "secondary.main",
-                        '&:hover': {
-                          backgroundColor: "primary.main",
-                        },
-                        display: "flex",
-                        alignItems: "center",
-                      }}>
-                View on GitHub/GitLab</Button>
+              }}
+            >          
+              <Button 
+                variant="contained"
+                sx={{
+                  backgroundColor: "secondary.main",
+                  '&:hover': {
+                    backgroundColor: "primary.main",
+                  },
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                View on GitHub/GitLab
+              </Button>
             </Link>
           )}
         </Box>

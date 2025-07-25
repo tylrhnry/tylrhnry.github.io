@@ -3,7 +3,10 @@ import {
   Box,
   Container,
   Typography,
+  Link,
 } from "@mui/material";    
+import EmailBlock from "./email";
+
 
 
 const Contact: React.FC = () => {
@@ -34,11 +37,20 @@ const Contact: React.FC = () => {
 
         <Container maxWidth="xl">
           <Typography>
-            Email: &emsp; resume.25@tylrhnry.com<br/>
-            My email is hosted securely on Tuta. If you're also using Tuta, messages you send me are automatically end-to-end encrypted.<br/>
-            Phone: &emsp;(385) three sixteen - eight eight eight won <br/>
+            <EmailBlock/>
+            Phone: &emsp;(385) three 6teen - eight eight eight won <br/>
             XMPP: &emsp;th.pers.prof@chatterboxtown.us<br/>
-            SimpleX: <a target="_blank" href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion" >Add me</a><br/>
+            SimpleX:{'  '}
+            <Link
+              href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
+              target="_blank"
+              rel="noopener noreferrer"
+              underline="always"
+              color="inherit"
+            >
+              Add me
+            </Link>
+            <br/>
             <br/>
           </Typography>
         </Container>

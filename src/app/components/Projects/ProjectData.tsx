@@ -55,7 +55,7 @@ export const projectData = [
     The software shares a declarative Nix configuration with my other computers to persist my updates and configuration settings across all my machines, making development extremely consistent. \n\
     The declarative approach is a dream to work with. Any update or progress I make on any machine can seamlessly be applied to all of my systems, completely removing repetitive configuration, which when setting up and working with many systems, is a huge deal. Backups are extremely simple. Software development and builds are managed the same way, removing the \"It works on my machine\" problem, and is a consistent tool across languages.",
     // The server also uses impermanence, which wipes my whole system to a minimal blank snapshot on every reboot. The only exception are files and directories that I explicitly declare to be bind-mounted to a persistent location. This enforces a stateless system that always maintains a fresh feel and complete reproducibility. I use sops-nix for secrets-management, allowing my to securely include keys and passwords into my configuration. Disko allowed my to set up very advanced file system configurations in a simple and extensible way.\n\
-    githubLink: "N/A", // TODO
+    githubLink: "",
     course: "",
     featured: false,
   },

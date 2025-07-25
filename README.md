@@ -14,6 +14,4 @@ Run `yarn deploy` to deploy the app to github and have the changes reflected in 
 
 
 ### Additions/Bugs/Fixes
-Check mobile use
-
-Add github links to vtol and home server
+Mobile use is a little inconsistent on a couple pages

@@ -56,9 +56,9 @@ const Experience: React.FC = () => {
             flexDirection: "column",
             alignItems: {xs: "center", md: "start"},
             margin: 0,
-            marginBottom: "2rem",
-            padding: 0,
-            width: "50%",
+            marginBottom: {xs: "0", md: "2rem"},
+            padding: {xs: "0.5rem", md: "0"},
+            width: {xs: "100%", md: "50%"},
           }}>
             <Container disableGutters sx={{ flex: 1, margin: {xs: "0.5rem", md: "0"}, paddingBottom: "1rem",}}>
               <WorkHist/>
@@ -73,20 +73,23 @@ const Experience: React.FC = () => {
         </Container>
 
         <Container maxWidth="xl" sx={{
-          padding: "2rem",
+          padding: {xs: "1.5rem", md: "1.5rem"},
+          paddingTop: {xs: "0"},
         }}>
-          <Box
-            component="img"
-            src={`/images/28.jpg`}
-            alt={`Project 28`}
-            sx={{
-              height: 120,
-              width: "100%",
-              borderRadius: 2,
-              boxShadow: 2,
-              flexShrink: 0,
-            }}
-          />
+          <Tooltip title="This is just the tree representation of some character analysis that was done in a data structures class. Mostly for decoration">
+            <Box
+              component="img"
+              src={'/images/28.jpg'}
+              alt={'Letter Occurance Tree'}
+              sx={{
+                height: 120,
+                width: "100%",
+                borderRadius: 2,
+                boxShadow: 2,
+                flexShrink: 0,
+              }}
+            />
+          </Tooltip>
           </Container>
       </Container>
     </Box>

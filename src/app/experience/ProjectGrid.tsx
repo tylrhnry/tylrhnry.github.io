@@ -55,7 +55,8 @@ export default function ProjectGrid() {
             maxHeight: { md: 800 },
             overflowY: 'auto',
             paddingY: 1,
-            paddingTop: '2rem',
+            padding: {xs: '0.5rem', md: '0'},
+            paddingTop: {xs: '2rem', md: '2rem'}, // For some reason this is actually necessary (idk)
           }}
         >
           {projectImages.map((img) => (

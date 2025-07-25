@@ -43,8 +43,9 @@ export default function ProjectGrid() {
         sx={{
           display: 'grid',
           gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-          gap: 0.5,
+          gap: 2,
           paddingY: 1,
+          padding: {xs: '1.5rem', md: '0rem'},
           paddingTop: '2rem',
           width: '100%',
         }}
