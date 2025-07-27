@@ -1,15 +1,22 @@
+'use client';
+
 import React from "react";
+import { useTheme } from '@mui/material/styles';
 import {
   Box,
   Container,
   Typography,
   Link,
-} from "@mui/material";    
+} from "@mui/material";
+import Image from "next/image";
 import EmailBlock from "./email";
 
 
 
 const Contact: React.FC = () => {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.background.default === "#111";
+
   return (
     <Box sx={{
       flexGrow: 1,
@@ -35,12 +42,36 @@ const Contact: React.FC = () => {
           </Typography>
         </Container>
 
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{ paddingTop: "1rem" }}>
           <Typography>
             <EmailBlock/>
-            Phone: &emsp;(385) three 6teen - eight eight eight won <br/>
-            XMPP: &emsp;th.pers.prof@chatterboxtown.us<br/>
-            SimpleX:{'  '}
+            <Image
+              src={"/images/phone.png"}
+              alt="Phone Icon"
+              width={20}
+              height={20}
+              style={{
+                filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+              }}
+            />
+            &emsp;Phone: &emsp;(385) three 6teen - triple eight won <br/>
+            <Image
+              src={"/images/xmpp.png"}
+              alt="XMPP Icon"
+              width={20}
+              height={20}
+              style={{
+                filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+              }}
+            />
+            &emsp;XMPP: &emsp;th.pers.prof@chatterboxtown.us<br/>
+            <Image
+              src={"/images/simplex.png"}
+              alt="SimpleX Icon"
+              width={20}
+              height={20}
+            />
+            &emsp;SimpleX:&emsp;
             <Link
               href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
               target="_blank"
@@ -55,15 +86,11 @@ const Contact: React.FC = () => {
           </Typography>
         </Container>
 
-        <Container maxWidth="xl" sx={{
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-        }}>
+        <Container maxWidth="xl" sx={{ paddingBottom: "2rem" }}>
           <Box
             sx={{
-              width: "70%",
-              height: "1300px", // Adjust as needed
+              width: {xs: "100%", md: "70%"},
+              height: {xs: "475px", md: "1300px"},
               border: "1px solid #ccc",
               borderRadius: 2,
               boxShadow: 2,

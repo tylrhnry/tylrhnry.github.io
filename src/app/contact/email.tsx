@@ -6,6 +6,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DownloadIcon from '@mui/icons-material/Download';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Image from "next/image";
+import { useTheme } from '@mui/material/styles';
 
 const pgpKey = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -75,25 +77,42 @@ const EmailBlock: React.FC = () => {
 
   const [showPGP, setShowPGP] = React.useState(false);
 
+  const theme = useTheme();
+  const isDarkMode = theme.palette.background.default === "#111";
   
   return (
     <Box>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        Email: &emsp;
-        <Link
-          href="mailto:resume.25@tylrhnry.com"
-          underline="hover"
-          variant="body1"
-          color="inherit"
-        >
-          resume.25@tylrhnry.com
-        </Link>
+      <Box sx={{ 
+        display: 'flex',
+        flexDirection: { xs: "column", md: "row" },
+        gap: 1,
+      }}>
+        <Box>
+          <Image
+            src={"/images/email.png"}
+            alt="Email Icon"
+            width={20}
+            height={20}
+            style={{
+              filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+            }}
+          />
+          &emsp;Email:&emsp;&emsp;
+          <Link
+            href="mailto:resume.25@tylrhnry.com"
+            underline="hover"
+            color="inherit"
+          >
+            resume.25@tylrhnry.com
+          </Link>
+        </Box>
 
         <Button
           onClick={() => setShowPGP(!showPGP)}
           size="small"
-          variant="text"
+          variant="outlined"
           startIcon={showPGP ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          sx={{marginLeft: {xs: "0", md: "1rem"}, }}
         >
           {showPGP ? 'Hide PGP' : 'Show PGP'}
         </Button>
@@ -103,36 +122,56 @@ const EmailBlock: React.FC = () => {
         <Box sx={{ my: 0 }}>
           <Box sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: {xs: "column", md: "row"},
           }}>
+            {/*
             <Typography sx={{ paddingTop: "0.3rem" }}>
-              My PGP Public Key (if you're into that sort of thing)
+              My &nbsp;
+              <Link
+                href="https://www.openpgp.org/"
+                color="inherit"
+              >PGP public key </Link>
             </Typography>
-            <Button
-              onClick={handleCopy}
-              variant="outlined"
-              startIcon={<ContentCopyIcon />}
-              sx={{ marginLeft: "1rem" }}
-            >
-              Copy to Clipboard
-            </Button>
-            <Button
-              component="a"
-              href="/files/Tyler-Henry-pgp-key.asc"
-              download
-              variant="outlined"
-              startIcon={<DownloadIcon />}
-              sx={{ marginLeft: "1rem" }}
-            >
-              Download
-            </Button>
+            */}
+            <Box sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: "1rem",
+            }}>
+              <Button
+                onClick={handleCopy}
+                variant="outlined"
+                startIcon={<ContentCopyIcon />}
+                sx={{ 
+                  marginLeft: {xs: "0", md: "0rem"},
+                  marginRight: {xs: "1rem", md: "0"},
+                }}
+              >
+                Copy
+              </Button>
+              <Button
+                component="a"
+                href="/files/Tyler-Henry-pgp-key.asc"
+                download
+                variant="outlined"
+                startIcon={<DownloadIcon />}
+                sx={{ 
+                  marginLeft: {xs: "1rem", md: "1rem"},
+                }}
+              >
+                Download
+              </Button>
+            </Box>
           </Box>
           <Box
             sx={{
               whiteSpace: 'pre-wrap',
               wordWrap: 'break-word',
               fontFamily: 'monospace',
-              fontSize: '0.7rem',
+              fontSize: {xs: "0.5rem", md: '0.7rem'},
+              textAlign: {xs: "center", md: "left"},
+              marginBottom: "2rem",
             }}
           >
             {pgpKey}

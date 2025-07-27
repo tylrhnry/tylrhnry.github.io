@@ -65,8 +65,8 @@ export default function ProjectGrid() {
               alt={img.alt}
               onClick={() => handleOpen(img)}
               sx={{
-                height: 400,
-                width: '95%',
+                height: {xs: 200, md: 400},
+                width: {xs: "100%", md: "97%"},
                 objectFit: 'cover',
                 borderRadius: 2,
                 boxShadow: 2,

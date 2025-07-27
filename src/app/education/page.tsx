@@ -51,7 +51,7 @@ const Education: FC = (): ReactElement => {
               flexDirection: "column",
               paddingLeft: { xs: "0", md: "3rem" },
               paddingTop: "2rem",
-              marginBottom: "1rem", // Adds space below the degree name
+              marginBottom: { xs: "0", md: "1rem" },
               minWidth: "20rem",
             }}
           >
@@ -83,9 +83,7 @@ const Education: FC = (): ReactElement => {
           >
             <Typography sx={{ 
               fontSize: "15px",
-              padding: {xs: "3.25rem", md: "0"},
-              paddingTop: {xs: "0", md: "2.5rem"},
-              paddingBottom: "0",
+              padding: {xs: "0 0 0 .25rem", md: "2.5rem 0 0 0"},
             }}>
               Jan. 2021 - Dec. 2024
               <br/>

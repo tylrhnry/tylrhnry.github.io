@@ -14,4 +14,6 @@ Run `yarn deploy` to deploy the app to github and have the changes reflected in 
 
 
 ### Additions/Bugs/Fixes
-Mobile use is a little inconsistent on a couple pages
+Icons on contact page don't update to background color
+change button color on contact page (not enough contrast)
+Add something to the left side of contact methods?
