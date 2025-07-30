@@ -35,91 +35,104 @@ const Contact: React.FC = () => {
           padding: "0.5rem",
           alignItems: "center",
         }}>
-          <Typography variant="h4" sx={{
-            // display: {md: "none"},
-          }}>
-            Get in Contact With Me
+          <Typography variant="h4">
+            Get In Contact With Me
           </Typography>
         </Container>
 
-        <Container maxWidth="xl" sx={{ paddingTop: "1rem" }}>
-          <Typography sx={{
+        <Container maxWidth="xl" sx={{ paddingTop: "1rem", display: "flex", justifyContent: "center", }}>
+          <Box sx={{
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
+            flexDirection: "row",
+            paddingRight: { xs: "0", md: "2rem" },
           }}>
-            <Box>
-              <EmailBlock/>
-              <Image
-                src={"/images/phone.png"}
-                alt="Phone Icon"
-                width={20}
-                height={20}
-                style={{
-                  filter: isDarkMode ? 'invert(1)' : 'invert(0)',
-                }}
-              />
-              {/*&emsp;Phone: &emsp;(385) three 6teen - triple eight won <br/>*/}
-              &emsp;Phone: &emsp;See resume below<br/>
-            </Box>
-
-            <Box sx={{ 
-              paddingLeft: { xs: "0", md: "3rem" },
-              paddingBottom: "2rem",
+            <Box sx={{
+              display: "flex",
+              flexDirection: "column",
             }}>
-              <Image
-                src={"/images/xmpp.png"}
-                alt="XMPP Icon"
-                width={20}
-                height={20}
-                style={{
-                  filter: isDarkMode ? 'invert(1)' : 'invert(0)',
-                }}
-              />
-              &emsp;
-              
-              <Link
-                href="https://xmpp.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                underline="hover"
-                color="inherit"
-              >
-                XMPP
-              </Link>
-              :&emsp;th.pers.prof@chatterboxtown.us<br/>
-              <Image
-                src={"/images/simplex.png"}
-                alt="SimpleX Icon"
-                width={20}
-                height={20}
-              />
-              &emsp;
-              <Link
-                href="https://simplex.chat/"
-                target="_blank"
-                rel="noopener noreferrer"
-                underline="hover"
-                color="inherit"
-              >
-                SimpleX
-              </Link>
-              :&emsp;
-              <Link
-                href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
-                target="_blank"
-                rel="noopener noreferrer"
-                underline="always"
-                color="inherit"
-              >
-                Add me
-              </Link>
+              <EmailBlock/>
+              <Box sx={{
+                  display: "flex",
+                  flexDirection: "row",
+              }}>
+                <Image
+                  src={"/images/phone.png"}
+                  alt="Phone Icon"
+                  width={20}
+                  height={20}
+                  style={{
+                    filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+                  }}
+                />
+                <Typography>
+                  {/*&emsp;Phone: &emsp;(385) three 6teen - triple eight won <br/>*/}
+                  &emsp;Phone: &emsp;See resume below<br/>
+                </Typography>
+              </Box>
             </Box>
-            <br/>
-            <br/>
-          </Typography>
+          </Box>
+
+          <Box sx={{ 
+            paddingLeft: { xs: "0", md: "2rem" },
+            paddingBottom: "2rem",
+          }}>
+            <Image
+              src={"/images/xmpp.png"}
+              alt="XMPP Icon"
+              width={20}
+              height={20}
+              style={{
+                filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+              }}
+            />
+            &emsp;
+            
+            <Link
+              href="https://xmpp.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              underline="hover"
+              color="inherit"
+            >
+              XMPP
+            </Link>
+            :&emsp;th.pers.prof@chatterboxtown.us<br/>
+            <Image
+              src={"/images/simplex.png"}
+              alt="SimpleX Icon"
+              width={20}
+              height={20}
+            />
+            &emsp;
+            <Link
+              href="https://simplex.chat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              underline="hover"
+              color="inherit"
+            >
+              SimpleX
+            </Link>
+            :&emsp;
+            <Link
+              href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
+              target="_blank"
+              rel="noopener noreferrer"
+              underline="always"
+              color="inherit"
+            >
+              Add me
+            </Link>
+          </Box>
+          <br/>
+          <br/>
         </Container>
 
-        <Container maxWidth="xl" sx={{ paddingBottom: "2rem" }}>
+        <Container maxWidth="xl" sx={{ 
+          paddingBottom: "2rem",
+          display: "flex",
+          justifyContent: "center",
+        }}>
           <Box
             sx={{
               display: "flex",
