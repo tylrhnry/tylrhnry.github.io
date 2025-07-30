@@ -40,15 +40,19 @@ const Contact: React.FC = () => {
           </Typography>
         </Container>
 
-        <Container maxWidth="xl" sx={{ paddingTop: "1rem", display: "flex", justifyContent: "center", }}>
+        <Container maxWidth="xl" sx={{
+          paddingTop: "1rem",
+          display: "flex",
+          justifyContent: { xs: "flex-start", md: "center" },
+        }}>
           <Box sx={{
             display: "flex",
-            flexDirection: "row",
-            paddingRight: { xs: "0", md: "2rem" },
+            flexDirection: { xs: "column", md: "row" },
           }}>
             <Box sx={{
               display: "flex",
               flexDirection: "column",
+              paddingRight: { xs: "0", md: "2rem" },
             }}>
               <EmailBlock/>
               <Box sx={{
@@ -70,59 +74,59 @@ const Contact: React.FC = () => {
                 </Typography>
               </Box>
             </Box>
-          </Box>
 
-          <Box sx={{ 
-            paddingLeft: { xs: "0", md: "2rem" },
-            paddingBottom: "2rem",
-          }}>
-            <Image
-              src={"/images/xmpp.png"}
-              alt="XMPP Icon"
-              width={20}
-              height={20}
-              style={{
-                filter: isDarkMode ? 'invert(1)' : 'invert(0)',
-              }}
-            />
-            &emsp;
-            
-            <Link
-              href="https://xmpp.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              underline="hover"
-              color="inherit"
-            >
-              XMPP
-            </Link>
-            :&emsp;th.pers.prof@chatterboxtown.us<br/>
-            <Image
-              src={"/images/simplex.png"}
-              alt="SimpleX Icon"
-              width={20}
-              height={20}
-            />
-            &emsp;
-            <Link
-              href="https://simplex.chat/"
-              target="_blank"
-              rel="noopener noreferrer"
-              underline="hover"
-              color="inherit"
-            >
-              SimpleX
-            </Link>
-            :&emsp;
-            <Link
-              href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
-              target="_blank"
-              rel="noopener noreferrer"
-              underline="always"
-              color="inherit"
-            >
-              Add me
-            </Link>
+            <Box sx={{ 
+              paddingLeft: { xs: "0", md: "2rem" },
+              paddingBottom: "2rem",
+            }}>
+              <Image
+                src={"/images/xmpp.png"}
+                alt="XMPP Icon"
+                width={20}
+                height={20}
+                style={{
+                  filter: isDarkMode ? 'invert(1)' : 'invert(0)',
+                }}
+              />
+              &emsp;
+              
+              <Link
+                href="https://xmpp.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="hover"
+                color="inherit"
+              >
+                XMPP
+              </Link>
+              :&emsp;th.pers.prof@chatterboxtown.us<br/>
+              <Image
+                src={"/images/simplex.png"}
+                alt="SimpleX Icon"
+                width={20}
+                height={20}
+              />
+              &emsp;
+              <Link
+                href="https://simplex.chat/"
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="hover"
+                color="inherit"
+              >
+                SimpleX
+              </Link>
+              :&emsp;
+              <Link
+                href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FPUzh-p-fxeDFHm2gYDqPjJ5rvIXb2EP4%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA4uLhdcbb1Q33tS-29dJsLFPoLRp8eutG2iZDnt21AiU%253D%26q%3Dc%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion"
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="always"
+                color="inherit"
+              >
+                Add me
+              </Link>
+            </Box>
           </Box>
           <br/>
           <br/>

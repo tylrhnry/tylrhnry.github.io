@@ -113,7 +113,9 @@ const EmailBlock: React.FC = () => {
           startIcon={showPGP ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
           sx={{
             padding: '0px 6px',
+            marginBottom: { xs: "0.5rem", md: "0" },
             marginLeft: { xs: "0", md: "1rem" },
+            maxWidth: "150px",
           }}
         >
           {showPGP ? 'Hide PGP' : 'Show PGP'}
