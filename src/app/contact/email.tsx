@@ -109,17 +109,25 @@ const EmailBlock: React.FC = () => {
 
         <Button
           onClick={() => setShowPGP(!showPGP)}
-          size="small"
           variant="outlined"
-          startIcon={showPGP ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          sx={{marginLeft: {xs: "0", md: "1rem"}, }}
+          startIcon={showPGP ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
+          sx={{
+            padding: '0px 6px',
+            marginLeft: { xs: "0", md: "1rem" },
+          }}
         >
           {showPGP ? 'Hide PGP' : 'Show PGP'}
         </Button>
       </Box>
 
       <Collapse in={showPGP}>
-        <Box sx={{ my: 0 }}>
+        <Box sx={{ my: 0, paddingTop: "1rem" }}>
+          <Link
+            href="https://www.openpgp.org/"
+            color="inherit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >What is OpenPGP?</Link>
           <Box sx={{
             display: "flex",
             flexDirection: {xs: "column", md: "row"},
