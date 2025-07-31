@@ -111,11 +111,14 @@ const EmailBlock: React.FC = () => {
           onClick={() => setShowPGP(!showPGP)}
           variant="outlined"
           startIcon={showPGP ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
+          color="inherit"
           sx={{
             padding: '0px 6px',
             marginBottom: { xs: "0.5rem", md: "0" },
             marginLeft: { xs: "0", md: "1rem" },
             maxWidth: "150px",
+            backgroundColor: "secondary.light",
+            color: "black",
           }}
         >
           {showPGP ? 'Hide PGP' : 'Show PGP'}
@@ -134,15 +137,6 @@ const EmailBlock: React.FC = () => {
             display: "flex",
             flexDirection: {xs: "column", md: "row"},
           }}>
-            {/*
-            <Typography sx={{ paddingTop: "0.3rem" }}>
-              My &nbsp;
-              <Link
-                href="https://www.openpgp.org/"
-                color="inherit"
-              >PGP public key </Link>
-            </Typography>
-            */}
             <Box sx={{
               display: "flex",
               flexDirection: "row",
@@ -156,6 +150,8 @@ const EmailBlock: React.FC = () => {
                 sx={{ 
                   marginLeft: {xs: "0", md: "0rem"},
                   marginRight: {xs: "1rem", md: "0"},
+                  backgroundColor: "secondary.light",
+                  color: "black",
                 }}
               >
                 Copy
@@ -166,12 +162,16 @@ const EmailBlock: React.FC = () => {
                 download
                 variant="outlined"
                 startIcon={<DownloadIcon />}
+                // color="inherit"
                 sx={{ 
                   marginLeft: {xs: "1rem", md: "1rem"},
+                  backgroundColor: "secondary.light",
+                  color: "black",
                 }}
               >
                 Download
               </Button>
+              <Button ></Button>
             </Box>
           </Box>
           <Box
