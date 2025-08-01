@@ -75,22 +75,21 @@ const Education: FC = (): ReactElement => {
               display: "flex",
               flexDirection: "column",
               padding: { xs: "0rem" },
-              paddingLeft: { xs: "0", md: "3rem" },
+              paddingLeft: { xs: "0rem", md: "3rem" },
               paddingTop: "2.5rem",
               marginBottom: "1rem",
               minWidth: "20rem",
+              maxWidth: "22.5rem",
             }}
           >
             <Typography sx={{ 
               fontSize: "15px",
-              padding: {xs: "0 0 0 .25rem", md: "2.5rem 0 0 0"},
+              padding: {xs: "0", md: "2.5rem 0 0 0"},
             }}>
               Jan. 2021 - Dec. 2024
               <br/>
               <br/>
-              <br/>
-              Focused on low-level programming, electronics integration,<br/>
-              machine learning, and computing theory<br/>
+              Focused on low-level programming, electronics integration, machine learning, and computing theory<br/>
             </Typography>
           </Box>
         </Container>
