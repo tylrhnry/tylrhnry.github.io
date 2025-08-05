@@ -52,12 +52,12 @@ const Home: FC = (): ReactElement => {
             paddingTop: {xs: "1rem", md: "0rem"},
             textIndent: "1.5rem",
           }}>
-            Hello! I’m Tyler Henry, a computer scientist passionate about signal processing. I&apos;ve been working for the United States Air Force on the F-16&apos;s APG-68 Radar since graduating with a Bachelor&apos;s in Computer Science from UVU. I love employing systems and tools that offer strong behavioral guarantees through well-defined semantics, type systems, and build environments.
+            Hello! I’m Tyler Henry, a computer scientist passionate about signal processing. I&apos;ve been working for the United States Air Force on the F-16&apos;s APG-68 Radar since graduating with a Bachelor&apos;s in Computer Science from Utah Valley University. I love employing systems and tools that offer strong behavioral guarantees through well-defined semantics, type systems, and build environments.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
           }}>
-            In my personal time, I recently set up a fully-declarative and reproducible personal server using the Nix functional language and package manager. The software is built with impermanence to enforce a stateless system, while ZFS RAID, snapshots, ECC memory, and nix generations lead to an extremely reliable and accurate system.
+            In my personal time, I recently set up a fully-declarative and reproducible personal server using the Nix functional language and package manager. The software is built with impermanence to enforce a stateless system, while ZFS RAID, snapshots, ECC memory, and Nix generations lead to an extremely reliable and accurate system.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
