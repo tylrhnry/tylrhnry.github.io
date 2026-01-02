@@ -99,11 +99,11 @@ const EmailBlock: React.FC = () => {
           />
           &emsp;Email:&emsp;&emsp;
           <Link
-            href="mailto:resume.25@tylrhnry.com"
+            href="mailto:resume.26@tylrhnry.com"
             underline="hover"
             color="inherit"
           >
-            resume.25@tylrhnry.com
+            resume.26@tylrhnry.com
           </Link>
         </Box>
 

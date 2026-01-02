@@ -1,10 +1,18 @@
 
 export const JobData = [
   {
+    title: "Radar Software Engineer",
+    company: "Anduril Industries",
+    dates: "Nov. 2025 - Present",
+    description: `* Developed a simulation framework to ascertain the tracking performance of the Radar under various target scenarios.
+    `,
+    featured: true,
+  },
+  {
     title: "F-16 Radar Software Engineer",
     company: "Air Force",
-    dates: "Dec. 2024 - Present",
-    description: `* Working on a large-scale, real-time, safety-critical system to support ongoing updates, additions, and fixes.
+    dates: "Dec. 2024 - Oct. 2025",
+    description: `* Supported ongoing updates, additions, and fixes on a large-scale, real-time, safety-critical system.
 
       * Developed a program to remove the team's dependency on multiple operating systems, custom tools, and an out-of-date version control system to well-supported, flexible software. 
     `,
@@ -40,7 +48,7 @@ export const JobData = [
 
       * Planned, formulated, and oversaw the fabrication of updated assembly lines, doubling the output potential of production teams.
     `,
-    featured: true,
+    featured: false,
   },
   {
     title: "Student Engineer",

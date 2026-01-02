@@ -52,18 +52,21 @@ const Home: FC = (): ReactElement => {
             paddingTop: {xs: "1rem", md: "0rem"},
             textIndent: "1.5rem",
           }}>
-            Hello! I’m Tyler Henry, a computer scientist passionate about signal processing. I&apos;ve been working for the United States Air Force on the F-16&apos;s APG-68 Radar since graduating with a Bachelor&apos;s in Computer Science from Utah Valley University. I love employing systems and tools that offer strong behavioral guarantees through well-defined semantics, type systems, and build environments.
+            Hello! I’m Tyler Henry, a computer scientist passionate about signal processing. I'm currently working for Anduril Industries working on bringing
+            up some new radars for active vehicle protection. Prior to that, I was working for the United States Air Force, supporting the fire control radar for the F-16.
+            I studied Computer Science from Utah Valley University. I love employing systems and tools that offer many behavioral guarantees through strong type-systems and reproducible environments.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
           }}>
-            In my personal time, I recently set up a fully-declarative and reproducible personal server using the Nix functional language and package manager. The software is built with impermanence to enforce a stateless system, while ZFS RAID, snapshots, ECC memory, and Nix generations lead to an extremely reliable and accurate system.
+            In my personal time, I recently set up a fully-declarative and reproducible personal server using the Nix functional language and package manager. The software is built with impermanence to enforce a stateless system, while ZFS RAID, snapshots, ECC memory, and Nix generations lead to an extremely reliable and accurate system. All of my machines share the same Nix configuration repository, allowing for extreme homogeneity without needing to repeat improvements on machines separately.
           </Typography>
           <Typography sx={{ 
             textIndent: "1.5rem",
             paddingBottom: {sx: "1rem", md: "0.5rem"},
           }}>
-            I&apos;ve been helping with the software development and design advising for Hive Dynamics, a recent start-up designing low-cost cruise missiles meant for mass production.
+            I've recently learned about the Clash programming language, which uses Haskell as a hardware description language for FPGA's. I'm currently studying
+            Haskell and VHDL in an attempt to use the high-level functional language to speed up FPGA development.
             I also have quite a few radio projects, including writing signal processing software for an SDR, studying for my Ham extra class licence, and building an HF Ham radio to allow me to communicate to a home radio server and send texts to family and friends via an XMPP to SMS service from nearly anywhere in the world. 
           </Typography>
         </Container>
